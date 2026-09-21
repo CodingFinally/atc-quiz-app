@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATC Sector Quiz</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons for sleek SVG icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* Smooth screen transitions */
+        .screen-enter {
+            opacity: 0;
+            transform: translateY(15px);
+            animation: fadeUp 0.4s ease-out forwards;
+        }
+        
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Custom option button styles for feedback */
+        .option-btn, .category-btn {
+            transition: all 0.2s ease;
+        }
+        .option-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            background-color: rgba(71, 85, 105, 0.8); /* hover state for slate-600 */
+        }
+        .option-btn:active:not(:disabled) {
+            transform: translateY(0);
+        }
+        
+        .category-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+        }
+        .category-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Correct Answer Styling */
+        .correct-answer {
+            background-color: #10b981 !important; /* Emerald 500 */
+            border-color: #059669 !important; /* Emerald 600 */
+            color: white !important;
+            transform: translateY(0) !important;
+        }
+        
+        /* Wrong Answer Styling */
+        .wrong-answer {
+            background-color: #ef4444 !important; /* Red 500 */
+            border-color: #dc2626 !important; /* Red 600 */
+            color: white !important;
+            opacity: 0.9;
+            transform: translateY(0) !important;
+        }
+        
+        /* Read-only / Disabled Styling */
+        .disabled-option {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 min-h-screen flex items-center justify-center p-4 text-slate-100">
+
+    <!-- Main App Container -->
+    <main class="w-full max-w-2xl bg-slate-800/90 backdrop-blur-xl border border-slate-700/50 rounded-3xl shadow-2xl relative overflow-hidden flex flex-col min-h-[600px]">
+        
+        <!-- Decorative Header Gradient -->
+        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 z-10"></div>
+
+        <!-- ==========================================
+             START SCREEN (MAIN CATEGORIES)
+        =========================================== -->
+        <section id="start-screen" class="flex flex-col p-8 flex-grow screen-enter">
+            <div class="text-center mb-8 mt-4">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-indigo-500/10 rounded-2xl text-indigo-400 border border-indigo-500/20 shadow-[0_0_20px_rgba(99,102,241,0.15)] mb-4">
+                    <i class="ph ph-radar text-4xl"></i>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-2 text-white">ATC Knowledge Base</h1>
+                <p class="text-slate-400 text-sm md:text-base">Select your operating environment to begin.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-grow content-center max-w-lg mx-auto w-full">
+                <button onclick="handleMainCategory('TERMINAL')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
+                    <i class="ph ph-buildings text-3xl text-blue-400 group-hover:text-indigo-400 transition-colors"></i>
+                    <span class="font-semibold text-lg tracking-wide">TERMINAL</span>
+                </button>
+                <button onclick="handleMainCategory('ENROUTE')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
+                    <i class="ph ph-airplane-in-flight text-3xl text-blue-400 group-hover:text-indigo-400 transition-colors"></i>
+                    <span class="font-semibold text-lg tracking-wide">ENROUTE</span>
+                </button>
+                <button onclick="handleMainCategory('RCC')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
+                    <i class="ph ph-lifebuoy text-3xl text-amber-400 group-hover:text-amber-300 transition-colors"></i>
+                    <span class="font-semibold text-lg tracking-wide">RCC</span>
+                </button>
+                <button onclick="handleMainCategory('FIC')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
+                    <i class="ph ph-broadcast text-3xl text-emerald-400 group-hover:text-emerald-300 transition-colors"></i>
+                    <span class="font-semibold text-lg tracking-wide">FIC</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SUB-CATEGORY SCREEN
+        =========================================== -->
+        <section id="subcategory-screen" class="hidden flex-col p-8 flex-grow">
+            <button onclick="showScreen('start')" class="self-start text-slate-400 hover:text-white flex items-center gap-2 mb-6 transition-colors px-3 py-1.5 bg-slate-800/50 rounded-lg border border-slate-700/50">
+                <i class="ph ph-arrow-left"></i> Main Menu
+            </button>
+            
+            <div class="text-center mb-8">
+                <h2 id="subcat-title" class="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-400">
+                    TERMINAL
+                </h2>
+                <p class="text-slate-400 text-sm">Select specific control sector</p>
+            </div>
+            
+            <div id="subcat-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-grow content-start max-w-lg mx-auto w-full">
+                <!-- Subcategory buttons injected via JS -->
+            </div>
+        </section>
+
+        <!-- ==========================================
+             QUIZ SCREEN
+        =========================================== -->
+        <section id="quiz-screen" class="hidden flex-col flex-grow w-full">
+            
+            <!-- Quiz Header -->
+            <header class="p-5 md:p-6 pb-4 border-b border-slate-700/50">
+                <div class="flex justify-between items-center mb-4">
+                    <!-- Top Left: Exit Button -->
+                    <button onclick="exitQuiz()" class="text-slate-400 hover:text-red-400 flex items-center gap-1.5 text-sm font-medium transition-colors bg-slate-800/50 hover:bg-slate-700/50 px-3 py-1.5 rounded-lg border border-slate-700/50">
+                        <i class="ph ph-x-circle text-lg"></i>
+                        Exit
+                    </button>
+                    
+                    <!-- Top Center: Sector & Progress Info -->
+                    <div class="flex flex-col items-center">
+                        <span id="active-sector-label" class="text-[10px] text-indigo-300 uppercase tracking-widest font-bold mb-0.5">TOWER CONTROL</span>
+                        <span id="question-counter" class="text-xs md:text-sm font-semibold text-slate-300 tracking-widest uppercase">Q 1 / 10</span>
+                    </div>
+                    
+                    <!-- Top Right: Score Info -->
+                    <span class="text-sm font-bold text-emerald-400 flex items-center gap-1.5 bg-emerald-900/20 px-3 py-1.5 rounded-lg border border-emerald-500/20">
+                        <i class="ph-fill ph-star"></i> <span id="current-score">0</span>
+                    </span>
+                </div>
+                
+                <!-- Progress Bar Container -->
+                <div class="w-full bg-slate-900 rounded-full h-2 overflow-hidden border border-slate-700/50">
+                    <div id="progress-bar" class="bg-gradient-to-r from-blue-500 to-indigo-500 h-2 rounded-full transition-all duration-500 ease-out" style="width: 0%"></div>
+                </div>
+            </header>
+
+            <!-- Question & Options Area -->
+            <div class="p-5 md:p-6 flex-grow flex flex-col">
+                <!-- Status badge (shows if in review mode) -->
+                <div id="review-badge" class="hidden mb-3">
+                    <span class="text-xs font-semibold px-2 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/30 rounded-md uppercase tracking-wider">Review Mode</span>
+                </div>
+
+                <h2 id="question-text" class="text-lg md:text-xl lg:text-2xl font-semibold mb-6 leading-relaxed text-slate-100">
+                    <!-- Question injected via JS -->
+                </h2>
+
+                <div id="options-container" class="flex flex-col gap-3 flex-grow">
+                    <!-- Options injected via JS -->
+                </div>
+            </div>
+
+            <!-- Quiz Footer (Navigation Controls) -->
+            <footer class="p-5 md:p-6 pt-4 border-t border-slate-700/50 flex justify-between items-center mt-auto bg-slate-800/50">
+                <!-- Bottom Left: Back Button -->
+                <div>
+                    <button id="back-btn" onclick="prevQuestion()" class="hidden px-5 py-3 bg-slate-700 hover:bg-slate-600 rounded-xl font-medium transition-colors flex items-center gap-2 border border-slate-600/50 text-slate-200 shadow-sm">
+                        <i class="ph ph-caret-left font-bold"></i>
+                        Back
+                    </button>
+                </div>
+                
+                <!-- Bottom Right: Next Button -->
+                <div>
+                    <button id="next-btn" onclick="nextQuestion()" class="hidden px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-medium transition-colors flex items-center gap-2 shadow-lg shadow-indigo-500/25">
+                        Next
+                        <i class="ph ph-caret-right font-bold"></i>
+                    </button>
+                </div>
+            </footer>
+        </section>
+
+        <!-- ==========================================
+             RESULTS SCREEN
+        =========================================== -->
+        <section id="result-screen" class="hidden flex-col items-center justify-center p-8 text-center flex-grow">
+            <div id="result-icon" class="w-24 h-24 rounded-full flex items-center justify-center mb-6 text-5xl">
+                <!-- Icon injected via JS -->
+            </div>
+            
+            <h2 id="result-title" class="text-3xl md:text-4xl font-bold mb-2 text-white">Evaluation Complete</h2>
+            <p id="result-message" class="text-slate-400 mb-8 text-base max-w-sm">Here is your operational assessment for <span id="result-sector" class="font-semibold text-slate-300"></span>.</p>
+            
+            <div class="bg-slate-900/60 rounded-2xl p-6 w-full max-w-[250px] mb-10 border border-slate-700/50 shadow-inner">
+                <p class="text-xs text-slate-400 uppercase tracking-widest mb-2 font-medium">Score Achieved</p>
+                <div class="flex justify-center items-baseline gap-2">
+                    <span id="final-score-value" class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">0</span>
+                    <span class="text-2xl text-slate-500 font-bold">/ <span id="total-questions">0</span></span>
+                </div>
+            </div>
+
+            <button onclick="showScreen('start')" class="w-full sm:w-auto px-10 py-4 bg-slate-700 hover:bg-slate-600 text-white rounded-xl font-semibold transition-colors duration-200 flex items-center justify-center gap-3 border border-slate-600 text-base shadow-sm">
+                <i class="ph ph-squares-four font-bold text-xl"></i>
+                Return to Main Menu
+            </button>
+        </section>
+
+    </main>
+
+    <script>
+        /**
+         * =============================================================
+         * DATA STORE: ATC KNOWLEDGE BASE
+         * =============================================================
+         * Replace these sample questions with your official route/airspace data.
+         * Format: { question: "...", options: ["A", "B", "C", "D"], correctAnswer: index }
+         */
+        const quizDatabase = {
+            "TERMINAL": {
+                "TOWER CONTROL": [
+                    {
+                        question: "What is the standard separation minimum for a departing light aircraft behind a heavy aircraft taking off from the same runway?",
+                        options: ["1 minute", "2 minutes", "3 minutes", "4 minutes"],
+                        correctAnswer: 1
+                    },
+                    {
+                        question: "When a steady green light signal is directed to an aircraft in flight, it means:",
+                        options: ["Cleared to land", "Return for landing", "Yield to other aircraft and continue circling", "Airport unsafe, do not land"],
+                        correctAnswer: 0
+                    },
+                    {
+                        question: "A runway incursion is strictly defined as:",
+                        options: ["Any aircraft landing on a closed runway.", "An aircraft exiting the runway at a high speed.", "Any occurrence at an aerodrome involving the incorrect presence of an aircraft, vehicle, or person on the protected area of a surface designated for the landing and take-off of aircraft.", "A loss of separation between two airborne aircraft on short final."],
+                        correctAnswer: 2
+                    }
+                ],
+                "APPROACH CONTROL": [
+                    {
+                        question: "Standard vertical separation minimum (VSM) applied by approach control between IFR flights below FL290 is:",
+                        options: ["500 feet", "1000 feet", "1500 feet", "2000 feet"],
+                        correctAnswer: 1
+                    },
+                    {
+                        question: "When vectoring an aircraft for an ILS approach, the final vector shall enable the aircraft to intercept the localizer course at an angle not greater than:",
+                        options: ["15 degrees", "30 degrees", "45 degrees", "60 degrees"],
+                        correctAnswer: 1
+                    },
+                    {
+                        question: "If an aircraft reports executing a missed approach, the controller's immediate priority is to:",
+                        options: ["Instruct the aircraft to switch to tower frequency.", "Issue holding instructions.", "Ensure separation from other traffic and assign a specific altitude/heading.", "Request the pilot's intentions for an alternate airport."],
+                        correctAnswer: 2
+                    }
+                ]
+            },
+            "ENROUTE": {
+                "RADAR": [
+                    {
+                        question: "In radar enroute airspace, what is the standard minimum lateral separation applied between two aircraft at the same flight level?",
+                        options: ["3 NM", "5 NM", "10 NM", "20 NM"],
+                        correctAnswer: 1
+                    },
+                    {
+                        question: "A radar handoff is successfully completed when:",
+                        options: ["The receiving controller sees the target on their screen.", "The aircraft switches communication frequencies.", "The receiving controller accepts the radar identification and assumes control of the aircraft.", "The automated flight plan transfers to the next sector."],
+                        correctAnswer: 2
+                    }
+                ],
+                "OCEANIC CONTROL": [
+                    {
+                        question: "Which longitudinal separation technique utilizes the aircraft's speed to maintain distance in oceanic airspace?",
+                        options: ["Time-based separation", "Distance measuring equipment (DME)", "Mach Number Technique", "GNSS interval spacing"],
+                        correctAnswer: 2
+                    },
+                    {
+                        question: "In the absence of VHF/UHF capability over the ocean, standard ATC communications are primarily conducted via:",
+                        options: ["Satcom Data Link only", "HF Radio and CPDLC", "VHF extended range networks", "FMS relay"],
+                        correctAnswer: 1
+                    }
+                ],
+                "PLANNER": [
+                    {
+                        question: "The primary role of a radar planner (or d-side) controller is to:",
+                        options: ["Issue direct clearances to pilots on frequency.", "Coordinate with adjacent sectors, manage flight data strips, and pre-plan conflict resolutions.", "Monitor the weather radar display exclusively.", "Approve all pilot requests for weather deviations automatically."],
+                        correctAnswer: 1
+                    },
+                    {
+                        question: "When processing a manual flight plan amendment via AFTN, a change message is denoted by the identifier:",
+                        options: ["CHG", "CPL", "FPL", "MOD"],
+                        correctAnswer: 0
+                    }
+                ],
+                "ALFA": [
+                    {
+                        question: "In Class A airspace, which flight rules are permitted?",
+                        options: ["VFR only", "IFR only", "Both IFR and VFR", "SVFR and IFR"],
+                        correctAnswer: 1
+                    },
+                    {
+                        question: "What is the primary objective of Air Traffic Control service?",
+                        options: ["To expedite airline schedules.", "To provide weather updates to all aircraft.", "To prevent collisions between aircraft and expedite/maintain an orderly flow of air traffic.", "To enforce aviation regulations and penalize infractions."],
+                        correctAnswer: 2
+                    }
+                ]
+            },
+            "RCC": [
+                {
+                    question: "Which emergency phase (INCERFA, ALERFA, DETRESFA) is declared when an aircraft has been cleared to land and fails to land within 5 minutes of the estimated time of landing?",
+                    options: ["INCERFA (Uncertainty phase)", "ALERFA (Alert phase)", "DETRESFA (Distress phase)", "None, it is a local standby."],
+                    correctAnswer: 1
+                },
+                {
+                    question: "The international frequency for aeronautical emergency communications is:",
+                    options: ["121.5 MHz", "122.8 MHz", "123.45 MHz", "121.9 MHz"],
+                    correctAnswer: 0
+                }
+            ],
+            "FIC": [
+                {
+                    question: "Flight Information Service (FIS) includes the provision of:",
+                    options: ["ATC clearances and vectors.", "Separation services for VFR flights.", "SIGMET, AIRMET, and information concerning weather conditions.", "Clearance to enter active restricted areas."],
+                    correctAnswer: 2
+                },
+                {
+                    question: "Who is primarily responsible for collision avoidance when an aircraft is flying under VFR and receiving Flight Information Service?",
+                    options: ["The FIC controller", "The Radar Controller", "The Pilot-in-command", "The Tower Controller"],
+                    correctAnswer: 2
+                }
+            ]
+        };
+
+        /* =============================================================
+         * STATE VARIABLES
+         * ============================================================= */
+        let activeQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let userAnswers = {}; // Tracks answers: { questionIndex: selectedOptionIndex }
+        let autoAdvanceTimeout = null;
+        let currentCategoryLabel = "";
+
+        /* =============================================================
+         * DOM ELEMENTS
+         * ============================================================= */
+        const screens = {
+            start: document.getElementById('start-screen'),
+            subcat: document.getElementById('subcategory-screen'),
+            quiz: document.getElementById('quiz-screen'),
+            result: document.getElementById('result-screen')
+        };
+        
+        const ui = {
+            subcatTitle: document.getElementById('subcat-title'),
+            subcatContainer: document.getElementById('subcat-container'),
+            activeSectorLabel: document.getElementById('active-sector-label'),
+            questionText: document.getElementById('question-text'),
+            optionsContainer: document.getElementById('options-container'),
+            nextBtn: document.getElementById('next-btn'),
+            backBtn: document.getElementById('back-btn'),
+            questionCounter: document.getElementById('question-counter'),
+            progressBar: document.getElementById('progress-bar'),
+            currentScore: document.getElementById('current-score'),
+            finalScoreValue: document.getElementById('final-score-value'),
+            totalQuestions: document.getElementById('total-questions'),
+            resultIcon: document.getElementById('result-icon'),
+            resultTitle: document.getElementById('result-title'),
+            resultMessage: document.getElementById('result-message'),
+            resultSector: document.getElementById('result-sector'),
+            reviewBadge: document.getElementById('review-badge')
+        };
+
+        /* =============================================================
+         * CORE FUNCTIONS
+         * ============================================================= */
+        
+        function showScreen(screenName) {
+            Object.values(screens).forEach(screen => {
+                screen.classList.add('hidden');
+                screen.classList.remove('flex', 'screen-enter');
+            });
+            
+            screens[screenName].classList.remove('hidden');
+            // Force reflow
+            void screens[screenName].offsetWidth; 
+            screens[screenName].classList.add('flex', 'screen-enter');
+            
+            // Clear any lingering timeouts if navigating away from quiz
+            if (screenName !== 'quiz') {
+                clearTimer();
+            }
+        }
+
+        function handleMainCategory(mainCategory) {
+            const data = quizDatabase[mainCategory];
+            
+            // Check if the data contains an array (direct questions) or object (sub-categories)
+            if (Array.isArray(data)) {
+                // It's a direct category like RCC or FIC
+                startCategoryQuiz(data, mainCategory);
+            } else if (typeof data === 'object') {
+                // It has subcategories like TERMINAL or ENROUTE
+                buildSubcategories(mainCategory, data);
+                showScreen('subcat');
+            } else {
+                alert("Data for this category is missing.");
+            }
+        }
+
+        function buildSubcategories(mainCategory, subcatsObject) {
+            ui.subcatTitle.textContent = mainCategory;
+            ui.subcatContainer.innerHTML = '';
+            
+            Object.keys(subcatsObject).forEach(subcatName => {
+                const btn = document.createElement('button');
+                btn.className = 'category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-5 flex items-center justify-between text-left group hover:bg-slate-700 hover:border-indigo-500/50 w-full';
+                btn.innerHTML = `
+                    <span class="font-semibold text-base md:text-lg tracking-wide text-slate-200 group-hover:text-white transition-colors">${subcatName}</span>
+                    <i class="ph ph-caret-right text-slate-500 group-hover:text-indigo-400 transition-colors"></i>
+                `;
+                btn.onclick = () => {
+                    const questionsArray = subcatsObject[subcatName];
+                    startCategoryQuiz(questionsArray, `${mainCategory} - ${subcatName}`);
+                };
+                ui.subcatContainer.appendChild(btn);
+            });
+        }
+
+        function startCategoryQuiz(questionsArray, label) {
+            if (!questionsArray || questionsArray.length === 0) {
+                alert(`No questions available for ${label} yet. Please update the data store.`);
+                return;
+            }
+            
+            activeQuestions = questionsArray;
+            currentCategoryLabel = label;
+            
+            // Reset state
+            currentQuestionIndex = 0;
+            score = 0;
+            userAnswers = {};
+            clearTimer();
+            
+            ui.currentScore.textContent = score;
+            ui.activeSectorLabel.textContent = currentCategoryLabel;
+            
+            showScreen('quiz');
+            loadQuestion();
+        }
+
+        function clearTimer() {
+            if (autoAdvanceTimeout) {
+                clearTimeout(autoAdvanceTimeout);
+                autoAdvanceTimeout = null;
+            }
+        }
+
+        function loadQuestion() {
+            clearTimer(); // Safety: Kill any pending auto-advance
+            
+            const currentQuestion = activeQuestions[currentQuestionIndex];
+            const savedAnswerIndex = userAnswers[currentQuestionIndex];
+            const isAlreadyAnswered = savedAnswerIndex !== undefined;
+
+            // Setup Navigation Buttons
+            ui.optionsContainer.innerHTML = '';
+            ui.backBtn.classList.toggle('hidden', currentQuestionIndex === 0);
+            ui.nextBtn.classList.toggle('hidden', !isAlreadyAnswered);
+            ui.reviewBadge.classList.toggle('hidden', !isAlreadyAnswered);
+
+            // Update Header Trackers
+            ui.questionCounter.textContent = `Q ${currentQuestionIndex + 1} / ${activeQuestions.length}`;
+            const progressPercentage = ((currentQuestionIndex) / activeQuestions.length) * 100;
+            ui.progressBar.style.width = `${progressPercentage}%`;
+            
+            // Render text
+            ui.questionText.textContent = currentQuestion.question;
+            
+            // Render options
+            currentQuestion.options.forEach((option, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn w-full text-left p-4 rounded-xl border border-slate-600 bg-slate-700/50 focus:outline-none focus:ring-2 focus:ring-indigo-500 font-medium text-slate-200 text-sm md:text-base flex justify-between items-center';
+                
+                const letter = String.fromCharCode(65 + index); // A, B, C, D
+                const contentSpan = document.createElement('span');
+                contentSpan.innerHTML = `<span class="inline-block w-7 text-slate-400 font-bold">${letter}</span> ${option}`;
+                btn.appendChild(contentSpan);
+                
+                // Interaction logic
+                btn.onclick = () => selectOption(index, btn);
+
+                // If rendering in REVIEW MODE (already answered)
+                if (isAlreadyAnswered) {
+                    btn.disabled = true;
+                    btn.classList.add('disabled-option');
+                    
+                    // Highlight correct answer
+                    if (index === currentQuestion.correctAnswer) {
+                        btn.classList.remove('disabled-option', 'bg-slate-700/50', 'border-slate-600');
+                        btn.classList.add('correct-answer');
+                        btn.innerHTML += '<i class="ph-bold ph-check text-xl"></i>';
+                    } 
+                    // Highlight user's incorrect choice
+                    else if (index === savedAnswerIndex) {
+                        btn.classList.remove('disabled-option', 'bg-slate-700/50', 'border-slate-600');
+                        btn.classList.add('wrong-answer');
+                        btn.innerHTML += '<i class="ph-bold ph-x text-xl"></i>';
+                    }
+                }
+                
+                ui.optionsContainer.appendChild(btn);
+            });
+        }
+
+        function selectOption(selectedIndex, selectedElement) {
+            if (userAnswers[currentQuestionIndex] !== undefined) return; // Prevent multi-clicks
+            
+            const currentQuestion = activeQuestions[currentQuestionIndex];
+            const isCorrect = selectedIndex === currentQuestion.correctAnswer;
+            const allOptions = ui.optionsContainer.children;
+            
+            // 1. Record the answer in history
+            userAnswers[currentQuestionIndex] = selectedIndex;
+
+            // 2. Update score if correct
+            if (isCorrect) {
+                score++;
+                ui.currentScore.textContent = score;
+                // Subtle pop animation
+                const scoreBadge = ui.currentScore.parentElement;
+                scoreBadge.classList.add('scale-110', 'bg-emerald-800/40', 'border-emerald-400/50');
+                setTimeout(() => scoreBadge.classList.remove('scale-110', 'bg-emerald-800/40', 'border-emerald-400/50'), 300);
+            }
+
+            // 3. Visual feedback on all buttons
+            for (let i = 0; i < allOptions.length; i++) {
+                const btn = allOptions[i];
+                btn.disabled = true;
+                btn.classList.add('disabled-option');
+                
+                if (i === currentQuestion.correctAnswer) {
+                    btn.classList.remove('disabled-option', 'bg-slate-700/50', 'border-slate-600');
+                    btn.classList.add('correct-answer');
+                    btn.innerHTML += '<i class="ph-bold ph-check text-xl"></i>';
+                } else if (i === selectedIndex && !isCorrect) {
+                    btn.classList.remove('disabled-option', 'bg-slate-700/50', 'border-slate-600');
+                    btn.classList.add('wrong-answer');
+                    btn.innerHTML += '<i class="ph-bold ph-x text-xl"></i>';
+                }
+            }
+
+            // 4. Show Next button immediately
+            ui.nextBtn.classList.remove('hidden');
+            ui.nextBtn.classList.add('screen-enter');
+
+            // 5. Trigger Auto-Advance ONLY if correct
+            if (isCorrect) {
+                autoAdvanceTimeout = setTimeout(() => {
+                    nextQuestion();
+                }, 2000);
+            }
+        }
+
+        function nextQuestion() {
+            clearTimer(); // Safety
+            currentQuestionIndex++;
+            
+            if (currentQuestionIndex < activeQuestions.length) {
+                loadQuestion();
+            } else {
+                finishQuiz();
+            }
+        }
+
+        function prevQuestion() {
+            clearTimer(); // Safety
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        }
+        
+        function exitQuiz() {
+            clearTimer(); // Safety
+            finishQuiz(); 
+        }
+
+        function finishQuiz() {
+            ui.progressBar.style.width = '100%';
+            
+            setTimeout(() => {
+                showScreen('result');
+                
+                ui.finalScoreValue.textContent = score;
+                ui.totalQuestions.textContent = activeQuestions.length;
+                ui.resultSector.textContent = currentCategoryLabel;
+                
+                const percentage = activeQuestions.length > 0 ? (score / activeQuestions.length) * 100 : 0;
+                
+                if (percentage === 100) {
+                    ui.resultIcon.className = "w-24 h-24 rounded-full flex items-center justify-center mb-6 text-6xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30";
+                    ui.resultIcon.innerHTML = '<i class="ph ph-check-circle"></i>';
+                    ui.resultTitle.textContent = "Exemplary Performance";
+                    ui.resultMessage.innerHTML = `You have demonstrated perfect operational knowledge for <br><span class="font-semibold text-slate-300">${currentCategoryLabel}</span>.`;
+                } else if (percentage >= 75) {
+                    ui.resultIcon.className = "w-24 h-24 rounded-full flex items-center justify-center mb-6 text-6xl bg-blue-500/20 text-blue-400 border border-blue-500/30";
+                    ui.resultIcon.innerHTML = '<i class="ph ph-thumbs-up"></i>';
+                    ui.resultTitle.textContent = "Operational Competence";
+                    ui.resultMessage.innerHTML = `Solid understanding of procedures for <br><span class="font-semibold text-slate-300">${currentCategoryLabel}</span>.`;
+                } else {
+                    ui.resultIcon.className = "w-24 h-24 rounded-full flex items-center justify-center mb-6 text-6xl bg-amber-500/20 text-amber-400 border border-amber-500/30";
+                    ui.resultIcon.innerHTML = '<i class="ph ph-warning-circle"></i>';
+                    ui.resultTitle.textContent = "Review Recommended";
+                    ui.resultMessage.innerHTML = `Further manual review is suggested for <br><span class="font-semibold text-slate-300">${currentCategoryLabel}</span>.`;
+                }
+            }, 200);
+        }
+    </script>
+</body>
+</html>
