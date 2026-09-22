@@ -1,4 +1,23 @@
-{
+{ 
+  "ATC BASICS": [
+    {
+      "question": "Sample Basics Question?",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "correctAnswer": 0
+    }
+  ],
+  "ICAO RULES": [
+    {
+        "question": "What does ICAO stand for?",
+        "options": ["International Civil Aviation Organization", "International Council of Aeronautics Operations", "International Committee for Air Operations", "International Civil Aeronautics Office"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Which of the following is a primary function of ICAO?",
+        "options": ["To regulate airline ticket prices.", "To establish international standards and recommended practices for aviation safety, security, efficiency, and environmental protection.", "To manage air traffic control operations in member states.", "To provide pilot training programs."],
+        "correctAnswer": 1
+    }
+  ],  
   "TERMINAL": {
         "TOWER CONTROL": [
                     {
