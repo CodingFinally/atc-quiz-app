@@ -234,125 +234,30 @@
     </main>
 
     <script>
-        /**
-         * =============================================================
-         * DATA STORE: ATC KNOWLEDGE BASE
-         * =============================================================
-         * Replace these sample questions with your official route/airspace data.
-         * Format: { question: "...", options: ["A", "B", "C", "D"], correctAnswer: index }
-         */
-        const quizDatabase = {
-            "TERMINAL": {
-                "TOWER CONTROL": [
-                    {
-                        question: "What is the standard separation minimum for a departing light aircraft behind a heavy aircraft taking off from the same runway?",
-                        options: ["1 minute", "2 minutes", "3 minutes", "4 minutes"],
-                        correctAnswer: 1
-                    },
-                    {
-                        question: "When a steady green light signal is directed to an aircraft in flight, it means:",
-                        options: ["Cleared to land", "Return for landing", "Yield to other aircraft and continue circling", "Airport unsafe, do not land"],
-                        correctAnswer: 0
-                    },
-                    {
-                        question: "A runway incursion is strictly defined as:",
-                        options: ["Any aircraft landing on a closed runway.", "An aircraft exiting the runway at a high speed.", "Any occurrence at an aerodrome involving the incorrect presence of an aircraft, vehicle, or person on the protected area of a surface designated for the landing and take-off of aircraft.", "A loss of separation between two airborne aircraft on short final."],
-                        correctAnswer: 2
-                    }
-                ],
-                "APPROACH CONTROL": [
-                    {
-                        question: "Standard vertical separation minimum (VSM) applied by approach control between IFR flights below FL290 is:",
-                        options: ["500 feet", "1000 feet", "1500 feet", "2000 feet"],
-                        correctAnswer: 1
-                    },
-                    {
-                        question: "When vectoring an aircraft for an ILS approach, the final vector shall enable the aircraft to intercept the localizer course at an angle not greater than:",
-                        options: ["15 degrees", "30 degrees", "45 degrees", "60 degrees"],
-                        correctAnswer: 1
-                    },
-                    {
-                        question: "If an aircraft reports executing a missed approach, the controller's immediate priority is to:",
-                        options: ["Instruct the aircraft to switch to tower frequency.", "Issue holding instructions.", "Ensure separation from other traffic and assign a specific altitude/heading.", "Request the pilot's intentions for an alternate airport."],
-                        correctAnswer: 2
-                    }
-                ]
-            },
-            "ENROUTE": {
-                "RADAR": [
-                    {
-                        question: "In radar enroute airspace, what is the standard minimum lateral separation applied between two aircraft at the same flight level?",
-                        options: ["3 NM", "5 NM", "10 NM", "20 NM"],
-                        correctAnswer: 1
-                    },
-                    {
-                        question: "A radar handoff is successfully completed when:",
-                        options: ["The receiving controller sees the target on their screen.", "The aircraft switches communication frequencies.", "The receiving controller accepts the radar identification and assumes control of the aircraft.", "The automated flight plan transfers to the next sector."],
-                        correctAnswer: 2
-                    }
-                ],
-                "OCEANIC CONTROL": [
-                    {
-                        question: "Which longitudinal separation technique utilizes the aircraft's speed to maintain distance in oceanic airspace?",
-                        options: ["Time-based separation", "Distance measuring equipment (DME)", "Mach Number Technique", "GNSS interval spacing"],
-                        correctAnswer: 2
-                    },
-                    {
-                        question: "In the absence of VHF/UHF capability over the ocean, standard ATC communications are primarily conducted via:",
-                        options: ["Satcom Data Link only", "HF Radio and CPDLC", "VHF extended range networks", "FMS relay"],
-                        correctAnswer: 1
-                    }
-                ],
-                "PLANNER": [
-                    {
-                        question: "The primary role of a radar planner (or d-side) controller is to:",
-                        options: ["Issue direct clearances to pilots on frequency.", "Coordinate with adjacent sectors, manage flight data strips, and pre-plan conflict resolutions.", "Monitor the weather radar display exclusively.", "Approve all pilot requests for weather deviations automatically."],
-                        correctAnswer: 1
-                    },
-                    {
-                        question: "When processing a manual flight plan amendment via AFTN, a change message is denoted by the identifier:",
-                        options: ["CHG", "CPL", "FPL", "MOD"],
-                        correctAnswer: 0
-                    }
-                ],
-                "ALFA": [
-                    {
-                        question: "In Class A airspace, which flight rules are permitted?",
-                        options: ["VFR only", "IFR only", "Both IFR and VFR", "SVFR and IFR"],
-                        correctAnswer: 1
-                    },
-                    {
-                        question: "What is the primary objective of Air Traffic Control service?",
-                        options: ["To expedite airline schedules.", "To provide weather updates to all aircraft.", "To prevent collisions between aircraft and expedite/maintain an orderly flow of air traffic.", "To enforce aviation regulations and penalize infractions."],
-                        correctAnswer: 2
-                    }
-                ]
-            },
-            "RCC": [
-                {
-                    question: "Which emergency phase (INCERFA, ALERFA, DETRESFA) is declared when an aircraft has been cleared to land and fails to land within 5 minutes of the estimated time of landing?",
-                    options: ["INCERFA (Uncertainty phase)", "ALERFA (Alert phase)", "DETRESFA (Distress phase)", "None, it is a local standby."],
-                    correctAnswer: 1
-                },
-                {
-                    question: "The international frequency for aeronautical emergency communications is:",
-                    options: ["121.5 MHz", "122.8 MHz", "123.45 MHz", "121.9 MHz"],
-                    correctAnswer: 0
-                }
-            ],
-            "FIC": [
-                {
-                    question: "Flight Information Service (FIS) includes the provision of:",
-                    options: ["ATC clearances and vectors.", "Separation services for VFR flights.", "SIGMET, AIRMET, and information concerning weather conditions.", "Clearance to enter active restricted areas."],
-                    correctAnswer: 2
-                },
-                {
-                    question: "Who is primarily responsible for collision avoidance when an aircraft is flying under VFR and receiving Flight Information Service?",
-                    options: ["The FIC controller", "The Radar Controller", "The Pilot-in-command", "The Tower Controller"],
-                    correctAnswer: 2
-                }
-            ]
-        };
+        
+        let quizData = {};
+
+// Fetch the questions from the external JSON file
+async function loadQuizData() {
+    try {
+        const response = await fetch('questions.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        quizData = await response.json();
+        console.log("Questions loaded successfully");
+        
+        // ADD THIS LINE: Force the app to render the home screen ONLY AFTER data is loaded
+        showScreen('start'); // (or whatever function draws your initial categories)
+        
+    } catch (error) {
+        console.error("Could not load the quiz data:", error);
+        alert("Failed to load quiz questions. Please try refreshing.");
+    }
+}
+
+// Call this function right when the script runs
+loadQuizData();
 
         /* =============================================================
          * STATE VARIABLES
@@ -416,7 +321,7 @@
         }
 
         function handleMainCategory(mainCategory) {
-            const data = quizDatabase[mainCategory];
+            const data = quizData[mainCategory];
             
             // Check if the data contains an array (direct questions) or object (sub-categories)
             if (Array.isArray(data)) {

@@ -1,0 +1,26 @@
+{
+  "TERMINAL": {
+    "TOWER CONTROL": [
+      {
+        "question": "What is the standard separation minimum for arriving aircraft under Wake Turbulence category Heavy behind another Heavy?",
+        "options": ["4 NM", "5 NM", "3 NM", "6 NM"],
+        "answer": "4 NM"
+      }
+    ],
+    "APPROACH CONTROL": [
+      {
+        "question": "Which standard instrument departure (SID) applies to Runway 27?",
+        "options": ["ALPHA 1", "BRAVO 2", "CHARLIE 3", "DELTA 4"],
+        "answer": "ALPHA 1"
+      }
+    ]
+  },
+  "ENROUTE": {
+    "RADAR": [],
+    "OCEANIC CONTROL": [],
+    "PLANNER": [],
+    "ALFA": []
+  },
+  "RCC": [],
+  "FIC": []
+}
