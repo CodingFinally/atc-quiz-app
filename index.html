@@ -230,11 +230,16 @@
                     </button>
                 </div>
                 
-                <!-- Bottom Right: Next Button -->
+                <!-- Bottom Right: Next Button with Progress Bar -->
                 <div>
-                    <button id="next-btn" onclick="nextQuestion()" class="hidden px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-medium transition-colors flex items-center gap-2 shadow-lg shadow-indigo-500/25">
-                        Next
-                        <i class="ph ph-caret-right font-bold"></i>
+                    <button id="next-btn" onclick="nextQuestion()" class="hidden relative overflow-hidden px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-medium transition-colors shadow-lg shadow-indigo-500/25 group">
+                        <!-- Progress overlay -->
+                        <div id="next-btn-progress" class="absolute left-0 top-0 h-full bg-white/20 w-0 z-0"></div>
+                        <!-- Button content -->
+                        <span class="relative z-10 flex items-center gap-2">
+                            Next
+                            <i class="ph ph-caret-right font-bold"></i>
+                        </span>
                     </button>
                 </div>
             </footer>
@@ -274,7 +279,8 @@
         // Fetch the questions from the external JSON file
         async function loadQuizData() {
             try {
-                const response = await fetch('questions.json');
+                // The '?t=' + new Date().getTime() ensures the browser always fetches the latest JSON file
+                const response = await fetch('questions.json?t=' + new Date().getTime());
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -435,6 +441,13 @@
                 clearTimeout(autoAdvanceTimeout);
                 autoAdvanceTimeout = null;
             }
+            
+            // Reset the Next button progress bar
+            const nextProgress = document.getElementById('next-btn-progress');
+            if (nextProgress) {
+                nextProgress.style.transition = 'none';
+                nextProgress.style.width = '0%';
+            }
         }
 
         function loadQuestion() {
@@ -549,6 +562,19 @@
 
             // 5. Trigger Auto-Advance ONLY if correct
             if (isCorrect) {
+                const nextProgress = document.getElementById('next-btn-progress');
+                // Reset the progress bar width immediately
+                nextProgress.style.transition = 'none';
+                nextProgress.style.width = '0%';
+                
+                // Force the browser to register the 0% width before animating
+                void nextProgress.offsetWidth; 
+                
+                // Start the 2-second fill animation
+                nextProgress.style.transition = 'width 2s linear';
+                nextProgress.style.width = '100%';
+                
+                // Jump to the next question when the animation finishes
                 autoAdvanceTimeout = setTimeout(() => {
                     nextQuestion();
                 }, 2000);

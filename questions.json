@@ -1,130 +1,2106 @@
-{ 
-  "ATC BASICS": [
-    {
-      "question": "Sample Basics Question?",
-      "options": ["Option A", "Option B", "Option C", "Option D"],
-      "correctAnswer": 0
-    }
-  ],
-  "ICAO RULES": [
-    {
-        "question": "What does ICAO stand for?",
-        "options": ["International Civil Aviation Organization", "International Council of Aeronautics Operations", "International Committee for Air Operations", "International Civil Aeronautics Office"],
-        "correctAnswer": 0
-    },
-    {
-        "question": "Which of the following is a primary function of ICAO?",
-        "options": ["To regulate airline ticket prices.", "To establish international standards and recommended practices for aviation safety, security, efficiency, and environmental protection.", "To manage air traffic control operations in member states.", "To provide pilot training programs."],
-        "correctAnswer": 1
-    }
-  ],  
-  "TERMINAL": {
+{
+    "ATC BASICS": [
+        {
+            "question": "Sample Basics Question?",
+            "options": [
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
+            ],
+            "correctAnswer": 0
+        }
+    ],
+    "ICAO RULES": [
+        {
+            "question": "What does ICAO stand for?",
+            "options": [
+                "International Civil Aviation Organization",
+                "International Council of Aeronautics Operations",
+                "International Committee for Air Operations",
+                "International Civil Aeronautics Office"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "question": "Which of the following is a primary function of ICAO?",
+            "options": [
+                "To regulate airline ticket prices.",
+                "To establish international standards and recommended practices for aviation safety, security, efficiency, and environmental protection.",
+                "To manage air traffic control operations in member states.",
+                "To provide pilot training programs."
+            ],
+            "correctAnswer": 1
+        }
+    ],
+    "TERMINAL": {
         "TOWER CONTROL": [
-                    {
-                        "question": "What is the standard separation minimum for a departing light aircraft behind a heavy aircraft taking off from the same runway?",
-                        "options": ["1 minute", "2 minutes", "3 minutes", "4 minutes"],
-                        "correctAnswer": 1
-                    },
-                    {
-                        "question": "When a steady green light signal is directed to an aircraft in flight, it means:",
-                        "options": ["Cleared to land", "Return for landing", "Yield to other aircraft and continue circling", "Airport unsafe, do not land"],
-                        "correctAnswer": 0
-                    },
-                    {
-                        "question": "A runway incursion is strictly defined as:",
-                        "options": ["Any aircraft landing on a closed runway.", "An aircraft exiting the runway at a high speed.", "Any occurrence at an aerodrome involving the incorrect presence of an aircraft, vehicle, or person on the protected area of a surface designated for the landing and take-off of aircraft.", "A loss of separation between two airborne aircraft on short final."],
-                        "correctAnswer": 2
-                    }
+            {
+                "question": "What is the standard separation minimum for a departing light aircraft behind a heavy aircraft taking off from the same runway?",
+                "options": [
+                    "1 minute",
+                    "2 minutes",
+                    "3 minutes",
+                    "4 minutes"
                 ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "When a steady green light signal is directed to an aircraft in flight, it means:",
+                "options": [
+                    "Cleared to land",
+                    "Return for landing",
+                    "Yield to other aircraft and continue circling",
+                    "Airport unsafe, do not land"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "A runway incursion is strictly defined as:",
+                "options": [
+                    "Any aircraft landing on a closed runway.",
+                    "An aircraft exiting the runway at a high speed.",
+                    "Any occurrence at an aerodrome involving the incorrect presence of an aircraft, vehicle, or person on the protected area of a surface designated for the landing and take-off of aircraft.",
+                    "A loss of separation between two airborne aircraft on short final."
+                ],
+                "correctAnswer": 2
+            }
+        ],
         "APPROACH CONTROL": [
-                    {
-                        "question": "Standard vertical separation minimum (VSM) applied by approach control between IFR flights below FL290 is:",
-                        "options": ["500 feet", "1000 feet", "1500 feet", "2000 feet"],
-                        "correctAnswer": 1
-                    },
-                    {
-                        "question": "When vectoring an aircraft for an ILS approach, the final vector shall enable the aircraft to intercept the localizer course at an angle not greater than:",
-                        "options": ["15 degrees", "30 degrees", "45 degrees", "60 degrees"],
-                        "correctAnswer": 1
-                    },
-                    {
-                        "question": "If an aircraft reports executing a missed approach, the controller's immediate priority is to:",
-                        "options": ["Instruct the aircraft to switch to tower frequency.", "Issue holding instructions.", "Ensure separation from other traffic and assign a specific altitude/heading.", "Request the pilot's intentions for an alternate airport."],
-                        "correctAnswer": 2
-                    }
-                ]
+            {
+                "question": "Standard vertical separation minimum (VSM) applied by approach control between IFR flights below FL290 is:",
+                "options": [
+                    "500 feet",
+                    "1000 feet",
+                    "1500 feet",
+                    "2000 feet"
+                ],
+                "correctAnswer": 1
             },
-  "ENROUTE": {
+            {
+                "question": "When vectoring an aircraft for an ILS approach, the final vector shall enable the aircraft to intercept the localizer course at an angle not greater than:",
+                "options": [
+                    "15 degrees",
+                    "30 degrees",
+                    "45 degrees",
+                    "60 degrees"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "If an aircraft reports executing a missed approach, the controller's immediate priority is to:",
+                "options": [
+                    "Instruct the aircraft to switch to tower frequency.",
+                    "Issue holding instructions.",
+                    "Ensure separation from other traffic and assign a specific altitude/heading.",
+                    "Request the pilot's intentions for an alternate airport."
+                ],
+                "correctAnswer": 2
+            }
+        ]
+    },
+    "ENROUTE": {
         "RADAR": [
-                    {
-                        "question": "In radar enroute airspace, what is the standard minimum lateral separation applied between two aircraft at the same flight level?",
-                        "options": ["3 NM", "5 NM", "10 NM", "20 NM"],
-                        "correctAnswer": 1
-                    },
-                    {
-                        "question": "A radar handoff is successfully completed when:",
-                        "options": ["The receiving controller sees the target on their screen.", "The aircraft switches communication frequencies.", "The receiving controller accepts the radar identification and assumes control of the aircraft.", "The automated flight plan transfers to the next sector."],
-                        "correctAnswer": 2
-                    }
+            {
+                "question": "In radar enroute airspace, what is the standard minimum lateral separation applied between two aircraft at the same flight level?",
+                "options": [
+                    "3 NM",
+                    "5 NM",
+                    "10 NM",
+                    "20 NM"
                 ],
-        "OCEANIC CONTROL": [
-                    {
-                        "question": "Which longitudinal separation technique utilizes the aircraft's speed to maintain distance in oceanic airspace?",
-                        "options": ["Time-based separation", "Distance measuring equipment (DME)", "Mach Number Technique", "GNSS interval spacing"],
-                        "correctAnswer": 2
-                    },
-                    {
-                        "question": "In the absence of VHF/UHF capability over the ocean, standard ATC communications are primarily conducted via:",
-                        "options": ["Satcom Data Link only", "HF Radio and CPDLC", "VHF extended range networks", "FMS relay"],
-                        "correctAnswer": 1
-                    }
-                ],
-        "PLANNER": [
-                    {
-                        "question": "The primary role of a radar planner (or d-side) controller is to:",
-                        "options": ["Issue direct clearances to pilots on frequency.", "Coordinate with adjacent sectors, manage flight data strips, and pre-plan conflict resolutions.", "Monitor the weather radar display exclusively.", "Approve all pilot requests for weather deviations automatically."],
-                        "correctAnswer": 1
-                    },
-                    {
-                        "question": "When processing a manual flight plan amendment via AFTN, a change message is denoted by the identifier:",
-                        "options": ["CHG", "CPL", "FPL", "MOD"],
-                        "correctAnswer": 0
-                    }
-                ],
-        "ALFA": [
-                    {
-                        "question": "In Class A airspace, which flight rules are permitted?",
-                        "options": ["VFR only", "IFR only", "Both IFR and VFR", "SVFR and IFR"],
-                        "correctAnswer": 1
-                    },
-                    {
-                        "question": "What is the primary objective of Air Traffic Control service?",
-                        "options": ["To expedite airline schedules.", "To provide weather updates to all aircraft.", "To prevent collisions between aircraft and expedite/maintain an orderly flow of air traffic.", "To enforce aviation regulations and penalize infractions."],
-                        "correctAnswer": 2
-                    }
-                ]
+                "correctAnswer": 1
             },
-  "RCC": [
-    {
-                    "question": "Which emergency phase (INCERFA, ALERFA, DETRESFA) is declared when an aircraft has been cleared to land and fails to land within 5 minutes of the estimated time of landing?",
-                    "options": ["INCERFA (Uncertainty phase)", "ALERFA (Alert phase)", "DETRESFA (Distress phase)", "None, it is a local standby."],
-                    "correctAnswer": 1
-                },
-                {
-                    "question": "The international frequency for aeronautical emergency communications is:",
-                    "options": ["121.5 MHz", "122.8 MHz", "123.45 MHz", "121.9 MHz"],
-                    "correctAnswer": 0
-                }],
-  "FIC": [
-    {
-                    "question": "Flight Information Service (FIS) includes the provision of:",
-                    "options": ["ATC clearances and vectors.", "Separation services for VFR flights.", "SIGMET, AIRMET, and information concerning weather conditions.", "Clearance to enter active restricted areas."],
-                    "correctAnswer": 2
-                },
-                {
-                    "question": "Who is primarily responsible for collision avoidance when an aircraft is flying under VFR and receiving Flight Information Service?",
-                    "options": ["The FIC controller", "The Radar Controller", "The Pilot-in-command", "The Tower Controller"],
-                    "correctAnswer": 2
-                }
-  ]
+            {
+                "question": "A radar handoff is successfully completed when:",
+                "options": [
+                    "The receiving controller sees the target on their screen.",
+                    "The aircraft switches communication frequencies.",
+                    "The receiving controller accepts the radar identification and assumes control of the aircraft.",
+                    "The automated flight plan transfers to the next sector."
+                ],
+                "correctAnswer": 2
+            }
+        ],
+        "OCEANIC CONTROL": [
+            {
+                "question": "Under Schedule III to Aircraft Rules 1937, what is the recency requirement for an Air Traffic Controller to exercise the privileges of their rating in respect of a particular rating during the preceding six months?",
+                "options": [
+                    "Minimum 5 hours in a period of 5 days",
+                    "Minimum 10 hours in a period of 10 days",
+                    "Minimum 15 hours in a period of 15 days",
+                    "Minimum 20 hours in a period of 30 days"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the minimum duration of On-The-Job Training (OJT) required for a trainee without any prior ratings to acquire an Oceanic Control Rating?",
+                "options": [
+                    "60 hours in 30 days",
+                    "90 hours in 45 days",
+                    "120 hours in 60 days",
+                    "180 hours in 3 months"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "When passing position reports on routes not defined by designated significant points, what is the required reporting interval?",
+                "options": [
+                    "Every 15 minutes",
+                    "Every 30 minutes",
+                    "After the first half hour of flight and at hourly intervals thereafter",
+                    "Only when crossing FIR boundaries"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the designated periodic interval for ADS-C reports to be received by the Oceanic Controller for standard surveillance?",
+                "options": [
+                    "840 seconds",
+                    "1620 seconds",
+                    "1920 seconds",
+                    "2400 seconds"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "During the UNCERTAINTY PHASE (INCERFA), what is the time limit after which an aircraft is considered to be in this phase if no communication has been received?",
+                "options": [
+                    "5 minutes",
+                    "15 minutes",
+                    "30 minutes",
+                    "60 minutes"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What color strip holder is used to denote Local/Training survey flights on the Flight Strip Board?",
+                "options": [
+                    "Yellow",
+                    "Blue",
+                    "Pink",
+                    "White"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "When is a Flight Progress Strip (FPS) considered obsolete and ready to be removed from the strip board?",
+                "options": [
+                    "Immediately after passing the reporting point",
+                    "After a minimum of 10 minutes once it has reported the next or last reporting point",
+                    "When the aircraft enters the next FIR",
+                    "When the aircraft reaches its cruising altitude"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In Flight Progress Strip markings, what does the symbol 'Z' denote?",
+                "options": [
+                    "Radar contact lost",
+                    "Delay not determined",
+                    "Cleared to cross ATS Route",
+                    "Clearance expires at"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What are the vertical limits of the UPB Surveillance Sector (UPB (S))?",
+                "options": [
+                    "FL150/GND",
+                    "FL255/GND",
+                    "FL460/FL155",
+                    "FL460/SFC"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In Class D airspace under Chennai OCC, what is the speed limit for IFR and VFR flights operating below 10,000 ft AMSL?",
+                "options": [
+                    "200 Kts IAS",
+                    "250 Kts IAS",
+                    "300 Kts IAS",
+                    "No speed limit"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What type of activity occurs at the Prohibited/Danger Area VOD 174 (A) Sriharikota I?",
+                "options": [
+                    "Naval firing range",
+                    "Sounding rockets launching station",
+                    "Satellite launching station",
+                    "Air-to-air combat training"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Under ATS Route designators, which letters are used for Area navigation routes which form part of regional networks of ATS routes?",
+                "options": [
+                    "A, B, G, R",
+                    "H, J, V, W",
+                    "L, M, N, P",
+                    "Q, T, Y, Z"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "For aircraft operating on EMARSSH routes like L645 and P574, what is the applicable longitudinal separation minimum based on Mach No. Technique (MNT)?",
+                "options": [
+                    "5 minutes",
+                    "10 minutes",
+                    "15 minutes",
+                    "20 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the minimum longitudinal separation between RNP 10 approved aircraft that are logged onto CPDLC or have Direct Controller Pilot Communication (DCPC)?",
+                "options": [
+                    "30 NM",
+                    "50 NM",
+                    "80 NM",
+                    "100 NM"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "For aircraft not meeting RNP 10 requirements, ATC may approve operations on RNP 10 routes in accordance with which procedure?",
+                "options": [
+                    "Traffic Information Broadcasts by Aircraft (TIBA)",
+                    "Strategic Lateral Offset Procedure (SLOP)",
+                    "Visual Flight Rules (VFR)",
+                    "Reduced Vertical Separation Minimum (RVSM)"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "When using a VOR for lateral separation, what is the minimum track difference and distance required?",
+                "options": [
+                    "10 degrees / 10 NM",
+                    "15 degrees / 15 NM",
+                    "20 degrees / 20 NM",
+                    "30 degrees / 15 NM"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the standard vertical separation minimum applied above FL410 in RVSM airspace?",
+                "options": [
+                    "500 FT",
+                    "1000 FT",
+                    "2000 FT",
+                    "4000 FT"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Under the Differential Mach Number Technique, what time-based separation is applied if the preceding aircraft is Mach 0.04 faster than the following aircraft?",
+                "options": [
+                    "5 minutes",
+                    "6 minutes",
+                    "7 minutes",
+                    "8 minutes"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the maximum ADS-C periodic reporting interval required to maintain a 50 NM PBCS separation between RNP 10 aircraft?",
+                "options": [
+                    "12 minutes",
+                    "14 minutes",
+                    "27 minutes",
+                    "32 minutes"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "If a flight is RSP 180 capable, what special indicator is displayed adjacent to the callsign in the AT3+ system?",
+                "options": [
+                    "A yellow 'PBC'",
+                    "An 'o' with an underscore",
+                    "A red 'RO'",
+                    "A green 'RSP'"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "During PBCS operations, if an ADS-C periodic report is overdue by how many minutes will the 'RO' mnemonic be displayed in yellow?",
+                "options": [
+                    "1 minute",
+                    "3 minutes",
+                    "5 minutes",
+                    "6 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Under the LHD Taxonomy, what does Code C describe?",
+                "options": [
+                    "Flight crew failing to climb/descend the aircraft as cleared",
+                    "Flight crew climbing/descending without ATC clearance",
+                    "Incorrect flight level provided due to incorrect operation or interpretation of airborne equipment",
+                    "ATC system loop error"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the maximum permitted Altimetry System Error (ASE) for an RVSM compliant aircraft?",
+                "options": [
+                    "150 Ft",
+                    "200 Ft",
+                    "245 Ft",
+                    "300 Ft"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "A Gross Navigational Error (GNE) classified as a lateral deviation requires reporting when it reaches what magnitude?",
+                "options": [
+                    "5 NM or greater",
+                    "10 NM or greater",
+                    "15 NM or greater",
+                    "20 NM or greater"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Which organization serves as the designated En-route Monitoring Agency (EMA) for India?",
+                "options": [
+                    "MAAR",
+                    "BOBASMA",
+                    "Boeing CRA",
+                    "DGCA"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Which organization serves as the designated Regional Monitoring Agency (RMA) for India?",
+                "options": [
+                    "Aero-Thai (MAAR)",
+                    "BOBASMA",
+                    "Boeing",
+                    "AAI Central Command Centre"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "What is the primary mode of communication in the OCH Airspace?",
+                "options": [
+                    "HFRT only",
+                    "CPDLC and VHF 126.15 MHz",
+                    "VHF 132.95 MHz only",
+                    "SATCOM only"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the update rate of Space-based ADS-B compared to traditional radar?",
+                "options": [
+                    "Two times faster",
+                    "Four times faster",
+                    "Six times faster",
+                    "Ten times faster"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Unless pre-departure coordination is affected, a verbal estimate shall be passed to the accepting ATS unit at least how many minutes prior to the transfer of control point?",
+                "options": [
+                    "5 minutes",
+                    "10 minutes",
+                    "15 minutes",
+                    "20 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Where is the Transfer of Control Point located for ATS Route N571 between Oceanic Control and UMM (UMN/UMS)?",
+                "options": [
+                    "AVNOS",
+                    "GIRNA",
+                    "IDASO",
+                    "AKMIL"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What AIDC message is sent when a change to the route makes the other facility no longer the next responsible unit?",
+                "options": [
+                    "REJ",
+                    "MAC",
+                    "TOC",
+                    "LRM"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In AIDC coordination, how does the Chennai automation system respond to an EST message automatically?",
+                "options": [
+                    "With a CDN message",
+                    "With a REJ message",
+                    "With an ACP message",
+                    "With a MAC message"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What subsystem in the AT3+ system provides synchronized time throughout the system?",
+                "options": [
+                    "Flight Data Processor Subsystem (FDPS)",
+                    "Data Communications Subsystem (DCS)",
+                    "Time Synchronization Subsystem",
+                    "System Management Subsystem"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What visual indication appears on the AT3+ workstation when both Surveillance Data Processors (SDPS) fail?",
+                "options": [
+                    "Yellow Banner indicating 'Restoration in progress'",
+                    "Red Banner with 'select Emergency-Mode'",
+                    "Red Banner with 'NO SDP TRACK SELECT DSA'",
+                    "Flashing 'CTO' warning"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "When AT3+ system enters Emergency State (E-State) due to FDPS failure, what feature is primarily affected?",
+                "options": [
+                    "Surveillance track data display",
+                    "Updated radar weather data",
+                    "Automatic track correlation and Handoff functionality",
+                    "VHF communication links"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In case of degradation of aircraft position source data where the NUC value goes below 5, how does the AT3 system display ADS-B track PPS?",
+                "options": [
+                    "Blue colour",
+                    "Yellow colour",
+                    "Red colour",
+                    "White colour"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "During a total AT3+ system failure, what message should the WSO advise the Tower to broadcast on DATIS?",
+                "options": [
+                    "ALL FLIGHTS MUST HOLD OVER MMV",
+                    "EXPECT DELAY FOR ARRIVALS & DEPARTURES AT CHENNAI DUE FAILURE OF ATM AUTOMATION SYSTEM, DELAY NOT DETERMINED",
+                    "RADAR OUTAGE RESUME OWN NAVIGATION",
+                    "AIRPORT CLOSED FOR ALL TRAFFIC"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Under emergency procedures, a hijacked aircraft wanting to land at Chennai Airport should NOT normally be permitted EXCEPT when it meets certain conditions, such as:",
+                "options": [
+                    "It is requesting refueling.",
+                    "It is an Indian registered aircraft.",
+                    "It has more than 200 passengers.",
+                    "It has international clearance."
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "If an ATS unit receives a bomb threat, what action should they NOT take?",
+                "options": [
+                    "Advise the flight crew without delay if in direct communication.",
+                    "Ascertain the intentions of the flight crew.",
+                    "Provide advice or suggestions concerning action to be taken in relation to the explosive device.",
+                    "Re-clear the aircraft to a requested new destination without delay."
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In the event of Air-Ground Communications Failure in an airspace with ATS surveillance, how long should the aircraft maintain its last assigned speed and level after the transponder is set to 7600 before adjusting?",
+                "options": [
+                    "3 minutes",
+                    "5 minutes",
+                    "7 minutes",
+                    "20 minutes"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "According to DGCA CAR, what is the maximum duration an Airborne Collision Avoidance System (ACAS) can be unserviceable?",
+                "options": [
+                    "3 days",
+                    "5 days",
+                    "10 days",
+                    "30 days"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "When an aircraft operating within controlled airspace needs to dump fuel, what is the minimum flight level it should use?",
+                "options": [
+                    "4000 ft",
+                    "5000 ft",
+                    "6000 ft",
+                    "10000 ft"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What separation must be provided for other traffic behind an aircraft dumping fuel within 15 minutes flying time?",
+                "options": [
+                    "At least 5 NM horizontally",
+                    "At least 500 ft if above",
+                    "At least 1000 ft if above and 3000 ft if below",
+                    "At least 2000 ft above and below"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Under what condition should a pilot declare 'MAYDAY, MAYDAY, MAYDAY, FUEL'?",
+                "options": [
+                    "When committing to land at a specific aerodrome with minimum fuel.",
+                    "When the calculated usable fuel predicted upon landing is less than the planned final reserve fuel.",
+                    "When fuel dumping is initiated.",
+                    "When navigating through a volcanic ash cloud."
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the prescribed level change if an aircraft must deviate 5.0 NM or more to the right of its cleared track towards the East (000-179 Magnetic) without ATC clearance?",
+                "options": [
+                    "Climb 90M (300Ft)",
+                    "Descend 90M (300Ft)",
+                    "Climb 150M (500Ft)",
+                    "Maintain current level"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "To mitigate wake turbulence in RVSM airspace, what is the maximum allowed temporary lateral offset a pilot can initiate?",
+                "options": [
+                    "0.5 NM",
+                    "1.0 NM",
+                    "2.0 NM",
+                    "5.0 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What does the acronym AUP stand for in the context of Flexible Use of Airspace (FUA)?",
+                "options": [
+                    "Airspace Utilization Protocol",
+                    "Aeronautical Use Publication",
+                    "Airspace Use Plan",
+                    "Area Utilization Procedure"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Which category of Conditional Route (CDR) is NOT available for flight planning and is only used for tactical clearances?",
+                "options": [
+                    "CDR1",
+                    "CDR2",
+                    "CDR3",
+                    "CDR4"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Under the C-ATFM system, what is the accepted time window for filing a flight plan (FPL) before the EOBT?",
+                "options": [
+                    "Between 1 Hour and 24 Hours",
+                    "Between 2 Hours and 48 Hours",
+                    "Between 3 Hours and 120 Hours",
+                    "Between 12 Hours and 72 Hours"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What type of Remotely Piloted Aircraft (RPA) is deployed from INS Rajali?",
+                "options": [
+                    "MQ-1 Predator",
+                    "MQ9A",
+                    "Heron TP",
+                    "Global Hawk"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the maximum speed and flight level capability of the MQ9A RPA operated from INS Rajali?",
+                "options": [
+                    "150 Kts, FL250",
+                    "220 Kts, FL400",
+                    "300 Kts, FL450",
+                    "180 Kts, FL300"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "How long does the battery backup of the MQ9A RPA last to support essential Navigation, SATCOM, and VHF communication during an engine failure?",
+                "options": [
+                    "20 minutes",
+                    "30 minutes",
+                    "45 minutes",
+                    "60 minutes"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "When filing a flight plan for an RPA that might experience a lost link, what remark must be specified in Item 18 of the FPL?",
+                "options": [
+                    "RMK/ RPA IN FLIGHT",
+                    "RMK/ NON-RVSM COMPLIANT",
+                    "RMK/ NO TCAS",
+                    "RMK/ Return home mode as per RPA SOP"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "What is the color code for a Volcanic Ash Alert when a volcanic eruption is in progress but the ash plume/cloud is not reaching nor expected to reach FL250?",
+                "options": [
+                    "RED",
+                    "ORANGE",
+                    "YELLOW",
+                    "GREEN"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "During an emergency descent, what phraseology should be used by the ATS unit to broadcast the emergency?",
+                "options": [
+                    "ALL STATIONS BE ADVISED, EMERGENCY DESCENT AT (location)",
+                    "MAYDAY MAYDAY, AIRCRAFT DESCENDING RAPIDLY AT (location)",
+                    "ATTENTION ALL AIRCRAFT IN THE VICINITY OF (location) EMERGENCY DESCENT IN PROGRESS",
+                    "URGENCY URGENCY, RAPID DESCENT INITIATED AT (location)"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Which longitudinal separation technique utilizes the aircraft's speed to maintain distance in oceanic airspace?",
+                "options": [
+                    "Time-based separation",
+                    "Distance measuring equipment (DME)",
+                    "Mach Number Technique",
+                    "GNSS interval spacing"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In the absence of VHF/UHF capability over the ocean, standard ATC communications are primarily conducted via:",
+                "options": [
+                    "Satcom Data Link only",
+                    "HF Radio and CPDLC",
+                    "VHF extended range networks",
+                    "FMS relay"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Under Schedule III, a duty performed by an Air Traffic Controller for the purpose of recency for any rating shall not be of a period less than what duration?",
+                "options": [
+                    "15 minutes",
+                    "30 minutes",
+                    "45 minutes",
+                    "60 minutes"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the duration of Module 1: Classroom Training for the Oceanic Control and ADS-C/CPDLC rating?",
+                "options": [
+                    "4 Hours",
+                    "6 Hours",
+                    "8 Hours",
+                    "10 Hours"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "If a trainee requires a Performance Improvement Program (PIP) after an assessment, the PIP duration will be 30% of the stipulated OJT hours, but in no case less than:",
+                "options": [
+                    "5 hours",
+                    "10 hours",
+                    "15 hours",
+                    "20 hours"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "When an aircraft intends to cross an established ATS route, the pilot must transmit their information to the ATC unit at least how many minutes prior to crossing?",
+                "options": [
+                    "5 minutes",
+                    "10 minutes",
+                    "15 minutes",
+                    "20 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "When reporting their position on radiotelephony, flight crews should transmit the word 'POSITION':",
+                "options": [
+                    "Only if requested by ATC.",
+                    "Immediately before or after the call sign of their aircraft.",
+                    "At the very end of the transmission.",
+                    "Before stating their current flight level."
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "For automatic flight strip printing, flight data of a departure enters into active status how many minutes prior to the flight's Estimated Off-Block Time (EOBT)?",
+                "options": [
+                    "15 minutes",
+                    "20 minutes",
+                    "30 minutes",
+                    "45 minutes"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In Flight Progress Strip markings, what does the symbol 'Sv' written in the miscellaneous box denote?",
+                "options": [
+                    "Speed variation approved",
+                    "Surveillance radar approach",
+                    "Security check completed",
+                    "Squawk verified"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What abbreviation or symbol is used on a Flight Progress Strip to indicate that the aircraft read back the appropriate altimeter setting correctly?",
+                "options": [
+                    "AS",
+                    "Q",
+                    "A/S",
+                    "QNH"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In Flight Progress Strip markings, the symbol 'TV' signifies which of the following actions?",
+                "options": [
+                    "Terminal VFR",
+                    "Time check given to aircraft",
+                    "Transponder verified",
+                    "Traffic in vicinity"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Which of the following is an active MWARA HF radio frequency used by Chennai Radio?",
+                "options": [
+                    "2872 KHz",
+                    "6583 KHz",
+                    "8861 KHz",
+                    "11285 KHz"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "What is the lateral limit radius of the Sri Vijaya Puram (Port Blair) control zone?",
+                "options": [
+                    "30 NM",
+                    "50 NM",
+                    "80 NM",
+                    "100 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the lateral limit radius of the Campbell Bay (VOBX) control zone?",
+                "options": [
+                    "15 NM",
+                    "20 NM",
+                    "30 NM",
+                    "50 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Danger Area VOD 180 (Chennai FIR) extends up to what vertical limit?",
+                "options": [
+                    "FL 255",
+                    "30000 FT MSL",
+                    "40000 FT MSL",
+                    "UNL"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In ATS Route designators, which letters indicate routes that do NOT form part of the regional networks of ATS routes and are NOT area navigation routes?",
+                "options": [
+                    "A, B, G, R",
+                    "L, M, N, P",
+                    "Q, T, Y, Z",
+                    "H, J, V, W"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "To cross the Bay of Bengal or Arabian Sea airspace in Indian FIRs, international operators are permitted to flight-plan how many ATS routes?",
+                "options": [
+                    "One ATS Route only",
+                    "Up to two ATS Routes",
+                    "Any approved RNP10 routes",
+                    "Only EMARSSH routes"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "Where is a flight-plan change of ATS routes permitted for aircraft crossing Indian FIRs?",
+                "options": [
+                    "Anywhere within Chennai OCC",
+                    "Over the Bay of Bengal only",
+                    "Over the Indian continental airspace only",
+                    "Only prior to FIR entry"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "While L510 is generally a unidirectional eastbound ATS route, under what condition can it be used as a bypass route for westbound flights?",
+                "options": [
+                    "If the flight is maintaining FL400",
+                    "If the flight crosses GIVAL at 1500 UTC or later and IBANI at 2230 UTC or earlier",
+                    "If it is an emergency or humanitarian flight",
+                    "If the aircraft is RNP 4 certified and logged onto CPDLC"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the standard lateral separation using VOR/DME below FL190?",
+                "options": [
+                    "10 degrees / 10 NM",
+                    "15 degrees / 15 NM",
+                    "15 degrees / 17 NM",
+                    "15 degrees / 18 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the standard lateral separation using VOR/DME at or above FL190?",
+                "options": [
+                    "15 degrees / 15 NM",
+                    "15 degrees / 17 NM",
+                    "15 degrees / 18 NM",
+                    "20 degrees / 20 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "For aircraft NOT meeting RNP 10 requirements operating in the oceanic airspace, what lateral separation minimum applies?",
+                "options": [
+                    "50 NM",
+                    "80 NM",
+                    "100 NM",
+                    "120 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the distance-based longitudinal separation minimum for climbing or descending aircraft on the same track?",
+                "options": [
+                    "5 NM",
+                    "10 NM",
+                    "15 NM",
+                    "20 NM"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Using the Differential Mach Number Technique, what time-based separation is applied if the preceding aircraft is Mach 0.03 faster than the following aircraft?",
+                "options": [
+                    "9 minutes",
+                    "8 minutes",
+                    "7 minutes",
+                    "5 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Using the Differential Mach Number Technique, what time-based separation is applied if the preceding aircraft is Mach 0.06 or greater faster than the following aircraft?",
+                "options": [
+                    "8 minutes",
+                    "7 minutes",
+                    "6 minutes",
+                    "5 minutes"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "To apply a 30 NM PBCS separation between RNP 2 or RNP 4 aircraft, what is the maximum ADS-C periodic reporting interval required?",
+                "options": [
+                    "12 minutes",
+                    "14 minutes",
+                    "27 minutes",
+                    "32 minutes"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "In an ADS-C report, a Figure of Merit (FOM) value of 6 indicates a position accuracy of less than what distance?",
+                "options": [
+                    "4 NM",
+                    "1 NM",
+                    "0.25 NM",
+                    "0.05 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In an ADS-C report, what does a Figure of Merit (FOM) value of 0 indicate?",
+                "options": [
+                    "Maximum accuracy (< 0.05 NM)",
+                    "Complete loss of navigational capabilities",
+                    "System is actively calibrating",
+                    "GPS spoofing detected"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Under the LHD Taxonomy, what does LHD Code B indicate?",
+                "options": [
+                    "Flight crew failing to climb/descend the aircraft as cleared",
+                    "Flight crew climbing/descending without ATC clearance",
+                    "ATC issues incorrect flight level clearance",
+                    "Airborne equipment failure"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Under the LHD Taxonomy, what does LHD Code D indicate?",
+                "options": [
+                    "ATC system loop error",
+                    "Coordination errors in ATC-to-ATC transfer",
+                    "Aircraft contingency event (e.g. engine failure)",
+                    "TCAS resolution advisory correctly followed"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "A Large Longitudinal Error (LLE) for an aircraft pair using distance-based separation is reported when the expected distance varies by how much?",
+                "options": [
+                    "3 NM or more",
+                    "5 NM or more",
+                    "10 NM or more",
+                    "15 NM or more"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Which organization is the designated Central Reporting Agency (CRA) for India to monitor ATS data link system safety performance?",
+                "options": [
+                    "Aero-Thai",
+                    "Airports Authority of India (AAI)",
+                    "Boeing",
+                    "Directorate General of Civil Aviation (DGCA)"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In a flight plan, which ADS-B designator indicates capability for dedicated 1090 MHz ADS-B 'out' and 'in'?",
+                "options": [
+                    "B1",
+                    "B2",
+                    "E",
+                    "L"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Aircraft operating in Indian continental airspace must carry serviceable 1090 MHz ES ADS-B transmitting equipment at or above which flight level?",
+                "options": [
+                    "FL 150",
+                    "FL 255",
+                    "FL 290",
+                    "FL 410"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "When was Space Based ADS-B integrated into the Operational Segment for Situational Awareness on a trial basis in Chennai?",
+                "options": [
+                    "01.01.2020",
+                    "29.01.2021",
+                    "15.08.2022",
+                    "08.07.2026"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the designated Short Code used for the Satellite phone (Satphone) at the Chennai Oceanic Control Centre (OCC)?",
+                "options": [
+                    "1215",
+                    "441930",
+                    "441933",
+                    "8991117568"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "When coordinating verbally between ATS units, any revision of estimates must be communicated if the difference is how many minutes or more?",
+                "options": [
+                    "2 minutes",
+                    "3 minutes",
+                    "5 minutes",
+                    "10 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In AIDC message handling, what is the required operational response to a Coordination (CDN) message?",
+                "options": [
+                    "LAM or LRM",
+                    "ACP only",
+                    "ACP, CDN, or REJ",
+                    "TOC or AOC"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In AIDC message handling, what is the required operational response to a Coordination Estimate (EST) message?",
+                "options": [
+                    "ACP",
+                    "CDN",
+                    "MAC",
+                    "REJ"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "In the AIDC interface, failure to receive an application response within the T alarm time results in what warning being issued to the controller?",
+                "options": [
+                    "CTO (Coordinated Time Out)",
+                    "LTO (Logical Time Out)",
+                    "LRM (Logical Rejection Message)",
+                    "SYS (System Failure)"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In airspace safety monitoring, Category-E Operational Errors are defined as errors resulting from what?",
+                "options": [
+                    "ATC system loop errors",
+                    "Airborne equipment malfunctions",
+                    "Coordination errors in the ATC to ATC transfer of control responsibility",
+                    "Flight crew failing to comply with clearances"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Between Chennai OCC and Colombo OCC/ACC, what is the specified Transfer of Control Point for ATS Route L645?",
+                "options": [
+                    "SULTO",
+                    "DUGOS",
+                    "MEMAK",
+                    "AKMIL"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "If a discrepancy exists between Mode C/ADS-B derived altitude and radiotelephony reported altitude, and it persists after confirming the pressure setting, what should the controller do?",
+                "options": [
+                    "Instruct the pilot to return to the departure aerodrome.",
+                    "Ask the pilot to stop altitude data transmission or override the displayed level with the reported level.",
+                    "Immediately suspend RVSM operations for the entire sector.",
+                    "Assign the aircraft a level 2000 ft above all other traffic."
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "When receiving a bomb threat via telephone, which question should the recipient ask first to help plan an immediate evacuation?",
+                "options": [
+                    "When will it go off?",
+                    "What does it look like?",
+                    "WHERE is/are the bomb/s?",
+                    "Why are you doing this?"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "According to DGCA CAR, twin jet-engine aeroplanes authorized to carry fewer than 10 passengers (maximum mass 5700 kg or less) must be equipped with which ACAS?",
+                "options": [
+                    "ACAS I",
+                    "ACAS II",
+                    "TCAS 7.1",
+                    "None required"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "When an aircraft operating within controlled airspace needs to dump fuel, what is the minimum flight level it should be assigned?",
+                "options": [
+                    "Not less than 3000 ft",
+                    "Not less than 6000 ft",
+                    "Not less than 10000 ft",
+                    "Not less than FL150"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Under what condition may the Watch Supervisory Officer consider suspending RVSM procedures within affected areas of the FIR?",
+                "options": [
+                    "When there is a complete radar failure.",
+                    "When there are pilot reports of greater than moderate turbulence.",
+                    "When a volcanic eruption occurs within 100 NM.",
+                    "When more than 50 aircraft are in the sector simultaneously."
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Which Volcanic Ash Advisory Centre (VAAC) is responsible for covering the Chennai FIR?",
+                "options": [
+                    "Tokyo VAAC",
+                    "Toulouse VAAC",
+                    "Darwin VAAC",
+                    "Washington VAAC"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "If an aircraft must deviate 5.0 NM or more to avoid weather without an ATC clearance while flying Westbound (180-359 Magnetic), what altitude offset should it apply if turning Right?",
+                "options": [
+                    "Climb 90M (300Ft)",
+                    "Descend 90M (300Ft)",
+                    "Climb 150M (500Ft)",
+                    "Descend 150M (500Ft)"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "RAMC-Chennai is required to publish the daily Airspace Use Plan (AUP) via NOTAM before what time?",
+                "options": [
+                    "0530 IST (0000 UTC)",
+                    "0930 IST (0400 UTC)",
+                    "1500 IST (0930 UTC)",
+                    "1800 IST (1230 UTC)"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Under the C-ATFM system, what is the accepted time window for airlines to file a Flight Plan (FPL) before the Estimated Off Block Time (EOBT)?",
+                "options": [
+                    "Between 1 Hour and 24 Hours",
+                    "Between 2 Hours and 48 Hours",
+                    "Between 3 Hours and 120 Hours (Five days)",
+                    "Between 12 Hours and 72 Hours"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the glide capability of the MQ9A RPA operated from INS Rajali during an engine failure or malfunction?",
+                "options": [
+                    "1 NM for a height loss of 1000ft",
+                    "2 NM for a height loss of 1000ft",
+                    "3 NM for a height loss of 1000ft",
+                    "5 NM for a height loss of 1000ft"
+                ],
+                "correctAnswer": 2
+            }
+        ],
+        "PLANNER": [
+            {
+                "question": "What must the procedural/planning controller do upon receiving actual reports of severe turbulence from an aircraft?",
+                "options": [
+                    "Suspend RVSM operations immediately on their own authority.",
+                    "Inform the WSO, which may require suspension of RVSM.",
+                    "Instruct the aircraft to descend to FL280.",
+                    "Coordinate directly with adjacent FIRs to halt all incoming traffic."
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In the event of a Radar failure, what is the immediate responsibility of the procedural/planning controller?",
+                "options": [
+                    "Transfer all traffic to the adjacent sector immediately.",
+                    "Instruct all aircraft to return to their departure aerodromes.",
+                    "Assume control of all traffic within the jurisdiction to provide Area Control Service.",
+                    "Hold all traffic at the sector boundary until radar is restored."
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Regarding chargeable overflights not entering through OCC, what action must the procedural/planning controller take?",
+                "options": [
+                    "Inform OCC 'A' Controller or make entries in the RNFC checklist.",
+                    "Deny clearance through the airspace.",
+                    "Request the pilot to contact OCC directly on a separate frequency.",
+                    "Issue a billing alert to the airline operator via AFTN."
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "What specific information must the procedural controller coordinate with the surveillance controller regarding satellite aerodromes?",
+                "options": [
+                    "Weather updates and visibility minimums for the aerodromes.",
+                    "Level clearances issued to satellite aerodromes within the TMA.",
+                    "Departure delays and slot allocations at the satellite aerodromes.",
+                    "Equipment failures and NOTAMs at the satellite aerodromes."
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "The primary role of a radar planner (or d-side) controller is to:",
+                "options": [
+                    "Issue direct clearances to pilots on frequency.",
+                    "Coordinate with adjacent sectors, manage flight data strips, and pre-plan conflict resolutions.",
+                    "Monitor the weather radar display exclusively.",
+                    "Approve all pilot requests for weather deviations automatically."
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "When processing a manual flight plan amendment via AFTN, a change message is denoted by the identifier:",
+                "options": [
+                    "CHG",
+                    "CPL",
+                    "FPL",
+                    "MOD"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "On a flight progress strip, what does the symbol 'Z' written in the miscellaneous box indicate?",
+                "options": [
+                    "Zone boundary crossed",
+                    "Delay not determined",
+                    "Cruising level reached",
+                    "Radar contact lost"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "When applying a Strategic Lateral Offset Procedure (SLOP) in authorized airspace, is the pilot required to inform ATC?",
+                "options": [
+                    "Yes, at least 10 minutes prior to offset.",
+                    "Yes, immediately upon initiating the offset.",
+                    "No, pilots are not required to inform ATC.",
+                    "Only if the offset exceeds 1 NM."
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Under Strategic Lateral Offset Procedures (SLOP), what is the maximum authorized offset to the right of the route centre line where lateral separation minima is 23 NM or more?",
+                "options": [
+                    "0.5 NM",
+                    "1.0 NM",
+                    "2.0 NM",
+                    "3.0 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the required longitudinal separation between RNP 10 approved aircraft when they are logged onto CPDLC or have Direct Controller Pilot Communication (DCPC) in VHF range?",
+                "options": [
+                    "30 NM",
+                    "50 NM",
+                    "80 NM",
+                    "100 NM"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In AIDC coordination, which message is normally used when a flight has not yet departed and its departure point is close to the common boundary?",
+                "options": [
+                    "ABI (Advance Boundary Information)",
+                    "CPL (Current Flight Plan)",
+                    "EST (Coordination Estimate)",
+                    "PAC (Pre-activation)"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "When applying the 10-minute longitudinal separation minimum using the Mach number technique, what speed requirement applies?",
+                "options": [
+                    "Both aircraft must fly at exactly the same Mach number.",
+                    "The preceding aircraft must maintain a true Mach number equal to or greater than the following aircraft.",
+                    "The following aircraft must maintain a true Mach number at least 0.02 greater than the preceding aircraft.",
+                    "The preceding aircraft must fly at a constant Indicated Air Speed (IAS)."
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What visual indication appears on the AT3+ workstation when both Flight Data Processing Systems (FDPS) fail and the system enters Emergency State (E-State)?",
+                "options": [
+                    "A Yellow Banner with 'Restoration in progress'",
+                    "A Red Banner with the tag 'NO SDP TRACK SELECT DSA'",
+                    "A Red Banner with the tag 'select Emergency-Mode'",
+                    "A flashing Green Banner with 'System Degraded'"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the maximum permitted Altimetry System Error (ASE) for an RVSM compliant aircraft?",
+                "options": [
+                    "100 Ft",
+                    "200 Ft",
+                    "245 Ft",
+                    "300 Ft"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the recency requirement for a controller to exercise the privileges of their rating?",
+                "options": [
+                    "5 hours in 2 days during preceding 3 months",
+                    "10 hours in 3 days during preceding 6 months",
+                    "15 hours in 5 days during preceding 12 months",
+                    "20 hours in 7 days during preceding 6 months"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What class of Medical Fitness Assessment must a trainee air traffic controller hold to receive instruction in an operational environment?",
+                "options": [
+                    "Class 1",
+                    "Class 2",
+                    "Class 3",
+                    "Class 4"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "An applicant for an Air Traffic Controller's license must demonstrate English language proficiency to which ICAO Operational Level?",
+                "options": [
+                    "Level 3",
+                    "Level 4",
+                    "Level 5",
+                    "Level 6"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Under Schedule III, an applicant for a license or rating must have passed the requisite examination within what period preceding the application date?",
+                "options": [
+                    "Not more than 1 year",
+                    "Not more than 2 years",
+                    "Not more than 3 years",
+                    "Not more than 5 years"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "For ATCOs not holding any rating, what is the minimum duration of On-The-Job Training (OJT) for an Area Control Procedural rating?",
+                "options": [
+                    "90 hours in 45 days",
+                    "120 hours in 60 days",
+                    "180 hours in 3 months",
+                    "200 hours in 4 months"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the minimum pass mark required for the written examination during Module 5 of the ACC Procedural Rating training?",
+                "options": [
+                    "70%",
+                    "75%",
+                    "80%",
+                    "85%"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "On the Flight Strip Board, what color strip holder is used to denote an East bound flight?",
+                "options": [
+                    "Blue",
+                    "Pink",
+                    "Yellow",
+                    "Green"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "On the Flight Strip Board, what color strip holder is used to denote a West bound flight?",
+                "options": [
+                    "Blue",
+                    "Pink",
+                    "Yellow",
+                    "Red"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "On the Flight Strip Board, what color strip holder is used to denote a Local/Training survey flight?",
+                "options": [
+                    "Yellow",
+                    "Blue",
+                    "Pink",
+                    "White"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "When can a Flight Progress Strip (FPS) be considered obsolete and removed from the board?",
+                "options": [
+                    "Immediately after the aircraft checks in.",
+                    "5 minutes after the aircraft reports the last reporting point.",
+                    "After a minimum of 10 minutes once it has reported the last reporting point of the jurisdiction.",
+                    "Only after the aircraft lands at its destination."
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In Flight Progress Strip markings, what does the symbol 'CE/(time)' stand for?",
+                "options": [
+                    "Clearance expected at (time)",
+                    "Clearance expires at (time)",
+                    "Commence enroute at (time)",
+                    "Cross exact at (time)"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In Flight Progress Strip markings, what abbreviation is used for 'Release subject to your discretion'?",
+                "options": [
+                    "RSTD",
+                    "RSD",
+                    "RSYD",
+                    "RLSD"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "For automatic flight strip printing, how far in advance is flight data distributed to the controller (VSP time) prior to entry into the sector?",
+                "options": [
+                    "10 minutes",
+                    "20 minutes",
+                    "30 minutes",
+                    "45 minutes"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In an automated system where flight progress strips are printed in black, what color ink should controllers preferably use for annotation purposes?",
+                "options": [
+                    "Blue",
+                    "Black",
+                    "Green",
+                    "Red"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "How should multiple level changes or Estimated Times of Arrival (ETAs) be recorded on a flight progress strip?",
+                "options": [
+                    "Erased and overwritten",
+                    "Tabulated downwards in order of occurrence",
+                    "Written horizontally left to right",
+                    "Written on the back of the strip"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "The Chennai Upper Airspace Harmonization (UAH) implemented in September 2011 is based on how many layers?",
+                "options": [
+                    "Two layers",
+                    "Three layers",
+                    "Four layers",
+                    "Five layers"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What are the vertical limits of the Upper Area Control sectors functioning from Chennai?",
+                "options": [
+                    "FL145 to FL255",
+                    "FL255 to FL460",
+                    "FL290 to FL460",
+                    "GND to FL145"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "How many Upper Area Control Sectors function from the Chennai Area Control Centre?",
+                "options": [
+                    "Three",
+                    "Four",
+                    "Five",
+                    "Six"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the identifier for the Kalpakkam Prohibited Area in the UMM Sector?",
+                "options": [
+                    "VOP 190",
+                    "VOP 193",
+                    "VOP 195",
+                    "VOP 197"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What are the active hours for the Danger Area VOD 177 (Kavalur) involving laser beams?",
+                "options": [
+                    "H24",
+                    "0330 to 1030 UTC Daily",
+                    "1230 to 0030 UTC Daily",
+                    "Notified by NOTAM 7 days in advance"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In airspace management, what does TSA stand for?",
+                "options": [
+                    "Terminal Segregation Area",
+                    "Temporary Segregated Area",
+                    "Total Surveillance Area",
+                    "Traffic Separation Airspace"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In airspace management, what does TRA stand for?",
+                "options": [
+                    "Temporary Restricted Airspace",
+                    "Terminal Routing Area",
+                    "Temporary Reserved Area",
+                    "Traffic Routing Airspace"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "An aircraft must obtain ATC clearance from the appropriate ATS unit at least how many minutes prior to entering controlled airspace?",
+                "options": [
+                    "5 minutes",
+                    "10 minutes",
+                    "15 minutes",
+                    "20 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "At what angle should an aircraft cross an ATS route?",
+                "options": [
+                    "45 degrees",
+                    "60 degrees",
+                    "90 degrees",
+                    "180 degrees"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Unless specifically permitted, all aircraft are forbidden to operate within what distance of the international border of India?",
+                "options": [
+                    "10 NM",
+                    "15 NM",
+                    "25 NM",
+                    "50 NM"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the standard longitudinal separation minimum applicable between aircraft flying on the same track, at the same level, in the same direction?",
+                "options": [
+                    "5 minutes",
+                    "10 minutes",
+                    "15 minutes",
+                    "20 minutes"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Pilots of aircraft meeting RNP 10 navigation requirements are to indicate which letter in Item 10 of the ICAO Flight Plan?",
+                "options": [
+                    "P",
+                    "R",
+                    "N",
+                    "X"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the standard vertical separation minimum (VSM) applied below FL290?",
+                "options": [
+                    "500 FT",
+                    "1000 FT",
+                    "1500 FT",
+                    "2000 FT"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the standard vertical separation minimum applied above FL410?",
+                "options": [
+                    "1000 FT",
+                    "2000 FT",
+                    "3000 FT",
+                    "4000 FT"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "When using a VOR for lateral separation, what is the required separation between aircraft?",
+                "options": [
+                    "10 degrees / 10 NM",
+                    "15 degrees / 15 NM",
+                    "20 degrees / 20 NM",
+                    "30 degrees / 15 NM"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "When using an NDB for lateral separation, what is the required separation between aircraft?",
+                "options": [
+                    "15 degrees / 15 NM",
+                    "20 degrees / 20 NM",
+                    "30 degrees / 15 NM",
+                    "45 degrees / 20 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "The speed of sound normally falls at what rate per 1000 ft increase in height?",
+                "options": [
+                    "1.5 kt",
+                    "2.0 kt",
+                    "2.5 kt",
+                    "3.0 kt"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Under the Differential Mach Number Technique, what time-based separation is applied if the preceding aircraft is Mach 0.05 faster than the following aircraft?",
+                "options": [
+                    "9 minutes",
+                    "8 minutes",
+                    "7 minutes",
+                    "6 minutes"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "Under the Differential Mach Number Technique, what time-based separation is applied if the preceding aircraft is Mach 0.04 faster than the following aircraft?",
+                "options": [
+                    "9 minutes",
+                    "8 minutes",
+                    "7 minutes",
+                    "6 minutes"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "A Large Height Deviation (LHD) is defined as a vertical deviation of how many feet or more from an ATC assigned altitude?",
+                "options": [
+                    "100 ft",
+                    "200 ft",
+                    "300 ft",
+                    "500 ft"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In the LHD Taxonomy, what does LHD Code 'A' represent?",
+                "options": [
+                    "Flight crew failing to climb/descend the aircraft as cleared",
+                    "Flight crew climbing/descending without ATC clearance",
+                    "ATC system loop error",
+                    "TCAS resolution advisory incorrectly followed"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "In the LHD Taxonomy, what does LHD Code 'C' represent?",
+                "options": [
+                    "Turbulence or weather-related causes",
+                    "Aircraft contingency event leading to sudden inability to maintain assigned flight level",
+                    "Incorrect flight level provided due to incorrect operation or interpretation of airborne equipment",
+                    "ATC issues incorrect flight level clearance"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "A Gross Navigational Error (GNE) classified as a lateral deviation requires reporting when it reaches what magnitude?",
+                "options": [
+                    "5 NM or greater",
+                    "10 NM or greater",
+                    "15 NM or greater",
+                    "25 NM or greater"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Which organization serves as the designated Regional Monitoring Agency (RMA) for India?",
+                "options": [
+                    "BOBASMA",
+                    "Aero-Thai (MAAR)",
+                    "Central Reporting Agency (CRA)",
+                    "DGCA"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Which organization serves as the designated En-route Monitoring Agency (EMA) for India?",
+                "options": [
+                    "MAAR",
+                    "Aero-Thai",
+                    "BOBASMA",
+                    "Boeing CRA"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In AIDC coordination, what does the message MAC indicate?",
+                "options": [
+                    "Message Acknowledge Complete",
+                    "Manual Acceptance Condition",
+                    "Minimum Altitude Clearance",
+                    "Coordination Cancellation"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "In AIDC coordination, what does the message PAC indicate?",
+                "options": [
+                    "Primary ATC Clearance",
+                    "Pre-activation",
+                    "Proposed Altitude Change",
+                    "Position And Course"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In AIDC message handling, what is the required operational response to a Current Flight Plan (CPL) message?",
+                "options": [
+                    "LAM or LRM",
+                    "EST or TOC",
+                    "ACP or CDN",
+                    "REJ only"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In AIDC, what message is transmitted automatically when the receiving automation system finds the message to be syntactically correct?",
+                "options": [
+                    "LAM (Logical Acknowledge Message)",
+                    "ACP (Acceptance Message)",
+                    "AOC (Assumption of Control)",
+                    "EST (Coordination Estimate)"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "For the VABB OCC AIDC interface, how far in advance of the Coordination Point (COP) is the Advance Boundary Information (ABI) sent?",
+                "options": [
+                    "20 min prior to COP",
+                    "25 min prior to COP",
+                    "45 min prior to COP",
+                    "60 min prior to COP"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What state does the AT3+ system enter when there is a failure of both Flight Data Processing Systems (FDPS)?",
+                "options": [
+                    "D-State (Degraded State)",
+                    "E-State (Emergency State)",
+                    "M-State (Manual State)",
+                    "F-State (Fallback State)"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "During a RAIM outage where the NUC value goes below 5, how does the AT3 system display ADS-B track PPS?",
+                "options": [
+                    "In yellow color",
+                    "In flashing blue color",
+                    "In red color",
+                    "They disappear entirely"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "ADS-C based surveillance services shall not be provided if the Figure of Merit (FOM) indicated in the report is less than what value?",
+                "options": [
+                    "FOM 4",
+                    "FOM 5",
+                    "FOM 6",
+                    "FOM 7"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In the event of a total AT3+ system failure, the WSO shall advise the Tower to broadcast what message on DATIS?",
+                "options": [
+                    "CLEARANCE DELIVERY ON HOLD",
+                    "EXPECT DELAY FOR ARRIVALS & DEPARTURES DUE FAILURE OF ATM AUTOMATION SYSTEM",
+                    "ALL FLIGHTS DIVERT TO ALTERNATE",
+                    "RADAR OUTAGE RESUME OWN NAVIGATION"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In AIDC messaging, what does the TOC message stand for?",
+                "options": [
+                    "Time Of Crossing",
+                    "Track Options Clearance",
+                    "Transfer of Control",
+                    "Terminal Operational Condition"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the lower and upper vertical limit for the 5 Upper Area Control sectors under the Chennai Upper Airspace Harmonization concept?",
+                "options": [
+                    "FL145 to FL255",
+                    "FL255 to FL460",
+                    "GND to FL145",
+                    "FL200 to FL400"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "How many minutes prior to entering the Chennai FIR must ADS/CPDLC equipped aircraft LOGON to the appropriate ATS unit?",
+                "options": [
+                    "5 minutes",
+                    "10 minutes",
+                    "15 minutes",
+                    "20 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the standard longitudinal separation minimum applicable between aircraft flying on the same track at the same level in procedural control?",
+                "options": [
+                    "5 minutes",
+                    "10 minutes",
+                    "15 minutes",
+                    "20 minutes"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Which international air-to-air VHF frequency must pilots maintain a continuous listening watch on under Traffic Information Broadcasts by Aircraft (TIBA) procedures?",
+                "options": [
+                    "121.50 MHz",
+                    "123.45 MHz",
+                    "128.10 MHz",
+                    "134.25 MHz"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the vertical separation minimum applied between aircraft within areas where RVSM procedures are suspended?",
+                "options": [
+                    "1000 Ft",
+                    "1500 Ft",
+                    "2000 Ft",
+                    "4000 Ft"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the main VHF operating frequency assigned to the Chennai UMM North (UMN) sector?",
+                "options": [
+                    "118.90 MHz",
+                    "125.30 MHz",
+                    "128.10 MHz",
+                    "134.25 MHz"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "How many layers comprise the Chennai Upper Airspace Harmonization concept?",
+                "options": [
+                    "Two layers",
+                    "Three layers",
+                    "Four layers",
+                    "Five layers"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What lateral separation is provided by the route structure under the ATS complex contingency plan?",
+                "options": [
+                    "30 NM",
+                    "50 NM",
+                    "80 NM",
+                    "100 NM"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "Which primary surveillance and communication tools are used for ADS/CPDLC established aircraft outside the Terminal Control Area in the Chennai FIR?",
+                "options": [
+                    "Radar for surveillance and VHF for communication",
+                    "ADS for surveillance and CPDLC for communication",
+                    "ADS-B for surveillance and HF for communication",
+                    "Primary radar for surveillance and CPDLC for communication"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the main operating frequency for the Chennai UMM South (UMS) sector?",
+                "options": [
+                    "119.25 MHz",
+                    "125.30 MHz",
+                    "128.10 MHz",
+                    "134.25 MHz"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "During RVSM suspension due to pilot reports of greater than moderate turbulence, what vertical separation minimum must be applied between all aircraft within affected areas?",
+                "options": [
+                    "1000 Ft",
+                    "1500 Ft",
+                    "2000 Ft",
+                    "3000 Ft"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Under the ATS complex contingency plan, what longitudinal separation minimum is applied in conjunction with the Mach number technique?",
+                "options": [
+                    "5 minutes",
+                    "10 minutes",
+                    "15 minutes",
+                    "20 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Which unit serves as the central point for collecting all information regarding an aircraft in a state of emergency within the Chennai FIR?",
+                "options": [
+                    "Chennai Aerodrome Control Tower",
+                    "Chennai Approach Control Office",
+                    "Chennai Flight Information Centre (FIC)",
+                    "Chennai Area Control Centre (ACC)"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What distance-based longitudinal separation minimum is applied between reciprocal aircraft operating at the same flight level?",
+                "options": [
+                    "5 NM",
+                    "10 NM",
+                    "15 NM",
+                    "20 NM"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "How should time be entered on a Flight Progress Strip in the main estimate box compared to subsequent fix boxes?",
+                "options": [
+                    "Minutes only in all boxes",
+                    "Four figures in the main estimate box and minutes only in subsequent boxes",
+                    "Four figures in all boxes regardless of hour changes",
+                    "Hours only in the main estimate box and minutes in subsequent boxes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "When clearing aircraft on routes adjacent to active danger areas, ATC must ensure aircraft remain at least what distance from the nearest edge of the danger area?",
+                "options": [
+                    "5 NM",
+                    "10 NM",
+                    "15 NM",
+                    "20 NM"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What radar-based longitudinal spacing is required between aircraft on ATS routes W20, W19, and V4 during LOA coordination procedures between Nagpur ACC and Chennai ACC?",
+                "options": [
+                    "20 NM",
+                    "30 NM",
+                    "40 NM",
+                    "50 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Unless otherwise specified, for how long after an aircraft passes the Transfer of Control Point (TCP) must the accepting unit obtain prior approval before allowing a level change?",
+                "options": [
+                    "5 minutes",
+                    "10 minutes",
+                    "15 minutes",
+                    "20 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Under contingency procedures while overflying the Chennai FIR, how many minutes before estimated entry into the next FIR must pilots contact the downstream ATC unit?",
+                "options": [
+                    "5 minutes",
+                    "10 minutes",
+                    "15 minutes",
+                    "30 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "According to flight progress strip marking rules, how should incorrect or obsolete data on a strip be corrected?",
+                "options": [
+                    "Erased completely",
+                    "Crossed out with a double line",
+                    "Struck through with a single line and new data inserted in the same box",
+                    "Circled in red without adding new text"
+                ],
+                "correctAnswer": 2
+            }
+        ],
+        "ALFA": [
+            {
+                "question": "In Class A airspace, which flight rules are permitted?",
+                "options": [
+                    "VFR only",
+                    "IFR only",
+                    "Both IFR and VFR",
+                    "SVFR and IFR"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the primary objective of Air Traffic Control service?",
+                "options": [
+                    "To expedite airline schedules.",
+                    "To provide weather updates to all aircraft.",
+                    "To prevent collisions between aircraft and expedite/maintain an orderly flow of air traffic.",
+                    "To enforce aviation regulations and penalize infractions."
+                ],
+                "correctAnswer": 2
+            }
+        ]
+    },
+    "RCC": [
+        {
+            "question": "Which emergency phase (INCERFA, ALERFA, DETRESFA) is declared when an aircraft has been cleared to land and fails to land within 5 minutes of the estimated time of landing?",
+            "options": [
+                "INCERFA (Uncertainty phase)",
+                "ALERFA (Alert phase)",
+                "DETRESFA (Distress phase)",
+                "None, it is a local standby."
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "question": "The international frequency for aeronautical emergency communications is:",
+            "options": [
+                "121.5 MHz",
+                "122.8 MHz",
+                "123.45 MHz",
+                "121.9 MHz"
+            ],
+            "correctAnswer": 0
+        }
+    ],
+    "FIC": [
+        {
+            "question": "Flight Information Service (FIS) includes the provision of:",
+            "options": [
+                "ATC clearances and vectors.",
+                "Separation services for VFR flights.",
+                "SIGMET, AIRMET, and information concerning weather conditions.",
+                "Clearance to enter active restricted areas."
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "question": "Who is primarily responsible for collision avoidance when an aircraft is flying under VFR and receiving Flight Information Service?",
+            "options": [
+                "The FIC controller",
+                "The Radar Controller",
+                "The Pilot-in-command",
+                "The Tower Controller"
+            ],
+            "correctAnswer": 2
+        }
+    ]
 }
