@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATC Sector Quiz</title>
-    
+
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Phosphor Icons for sleek SVG icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
             -webkit-tap-highlight-color: transparent;
         }
-        
+
         /* Smooth screen transitions */
         .screen-enter {
             opacity: 0;
             transform: translateY(15px);
             animation: fadeUp 0.4s ease-out forwards;
         }
-        
+
         @keyframes fadeUp {
             to {
                 opacity: 1;
@@ -35,21 +36,25 @@
         }
 
         /* Custom option button styles for feedback */
-        .option-btn, .category-btn {
+        .option-btn,
+        .category-btn {
             transition: all 0.2s ease;
         }
+
         .option-btn:hover:not(:disabled) {
             transform: translateY(-2px);
             background-color: rgba(71, 85, 105, 0.8);
         }
+
         .option-btn:active:not(:disabled) {
             transform: translateY(0);
         }
-        
+
         .category-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
         }
+
         .category-btn:active {
             transform: translateY(0);
         }
@@ -61,7 +66,7 @@
             color: white !important;
             transform: translateY(0) !important;
         }
-        
+
         /* Wrong Answer Styling */
         .wrong-answer {
             background-color: #ef4444 !important;
@@ -70,7 +75,7 @@
             opacity: 0.9;
             transform: translateY(0) !important;
         }
-        
+
         /* Read-only / Disabled Styling */
         .disabled-option {
             opacity: 0.5;
@@ -78,49 +83,64 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 min-h-screen flex items-center justify-center p-4 text-slate-100">
+
+<body
+    class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 min-h-screen flex items-center justify-center p-4 text-slate-100">
 
     <!-- Main App Container -->
-    <main class="w-full max-w-2xl bg-slate-800/90 backdrop-blur-xl border border-slate-700/50 rounded-3xl shadow-2xl relative overflow-hidden flex flex-col min-h-[600px]">
-        
+    <main
+        class="w-full max-w-2xl bg-slate-800/90 backdrop-blur-xl border border-slate-700/50 rounded-3xl shadow-2xl relative overflow-hidden flex flex-col min-h-[600px]">
+
         <!-- Decorative Header Gradient -->
-        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 z-10"></div>
+        <div
+            class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 z-10">
+        </div>
 
         <!-- ==========================================
              START SCREEN (MAIN CATEGORIES)
         =========================================== -->
         <section id="start-screen" class="hidden flex-col p-8 flex-grow screen-enter">
             <div class="text-center mb-8 mt-4">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-indigo-500/10 rounded-2xl text-indigo-400 border border-indigo-500/20 shadow-[0_0_20px_rgba(99,102,241,0.15)] mb-4">
+                <div
+                    class="inline-flex items-center justify-center w-16 h-16 bg-indigo-500/10 rounded-2xl text-indigo-400 border border-indigo-500/20 shadow-[0_0_20px_rgba(99,102,241,0.15)] mb-4">
                     <i class="ph ph-radar text-4xl"></i>
                 </div>
                 <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-2 text-white">ATC Knowledge Base</h1>
                 <p class="text-slate-400 text-sm md:text-base">Select your operating environment to begin.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-grow content-center max-w-lg mx-auto w-full">
-                <button onclick="handleMainCategory('ATC BASICS')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
+                <button onclick="handleMainCategory('ATC BASICS')"
+                    class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
                     <i class="ph ph-book-open text-3xl text-cyan-400 group-hover:text-cyan-300 transition-colors"></i>
                     <span class="font-semibold text-lg tracking-wide text-center">ATC BASICS</span>
                 </button>
-                <button onclick="handleMainCategory('ICAO RULES')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
-                    <i class="ph ph-globe-hemisphere-west text-3xl text-violet-400 group-hover:text-violet-300 transition-colors"></i>
+                <button onclick="handleMainCategory('ICAO RULES')"
+                    class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
+                    <i
+                        class="ph ph-globe-hemisphere-west text-3xl text-violet-400 group-hover:text-violet-300 transition-colors"></i>
                     <span class="font-semibold text-lg tracking-wide text-center">ICAO RULES</span>
                 </button>
-                <button onclick="handleMainCategory('TERMINAL')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
+                <button onclick="handleMainCategory('TERMINAL')"
+                    class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
                     <i class="ph ph-buildings text-3xl text-blue-400 group-hover:text-indigo-400 transition-colors"></i>
                     <span class="font-semibold text-lg tracking-wide">TERMINAL</span>
                 </button>
-                <button onclick="handleMainCategory('ENROUTE')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
-                    <i class="ph ph-airplane-in-flight text-3xl text-blue-400 group-hover:text-indigo-400 transition-colors"></i>
+                <button onclick="handleMainCategory('ENROUTE')"
+                    class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
+                    <i
+                        class="ph ph-airplane-in-flight text-3xl text-blue-400 group-hover:text-indigo-400 transition-colors"></i>
                     <span class="font-semibold text-lg tracking-wide">ENROUTE</span>
                 </button>
-                <button onclick="handleMainCategory('RCC')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
+                <button onclick="handleMainCategory('RCC')"
+                    class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
                     <i class="ph ph-lifebuoy text-3xl text-amber-400 group-hover:text-amber-300 transition-colors"></i>
                     <span class="font-semibold text-lg tracking-wide">RCC</span>
                 </button>
-                <button onclick="handleMainCategory('FIC')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
-                    <i class="ph ph-broadcast text-3xl text-emerald-400 group-hover:text-emerald-300 transition-colors"></i>
+                <button onclick="handleMainCategory('FIC')"
+                    class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
+                    <i
+                        class="ph ph-broadcast text-3xl text-emerald-400 group-hover:text-emerald-300 transition-colors"></i>
                     <span class="font-semibold text-lg tracking-wide">FIC</span>
                 </button>
             </div>
@@ -130,18 +150,21 @@
              SUB-CATEGORY SCREEN
         =========================================== -->
         <section id="subcategory-screen" class="hidden flex-col p-8 flex-grow">
-            <button onclick="showScreen('start')" class="self-start text-slate-400 hover:text-white flex items-center gap-2 mb-6 transition-colors px-3 py-1.5 bg-slate-800/50 rounded-lg border border-slate-700/50">
+            <button onclick="showScreen('start')"
+                class="self-start text-slate-400 hover:text-white flex items-center gap-2 mb-6 transition-colors px-3 py-1.5 bg-slate-800/50 rounded-lg border border-slate-700/50">
                 <i class="ph ph-arrow-left"></i> Main Menu
             </button>
-            
+
             <div class="text-center mb-8">
-                <h2 id="subcat-title" class="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-400">
+                <h2 id="subcat-title"
+                    class="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-400">
                     TERMINAL
                 </h2>
                 <p class="text-slate-400 text-sm">Select specific control sector</p>
             </div>
-            
-            <div id="subcat-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-grow content-start max-w-lg mx-auto w-full">
+
+            <div id="subcat-container"
+                class="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-grow content-start max-w-lg mx-auto w-full">
                 <!-- Subcategory buttons injected via JS -->
             </div>
         </section>
@@ -149,25 +172,35 @@
         <!-- ==========================================
              QUESTION COUNT SCREEN
         =========================================== -->
-        <section id="question-count-screen" class="hidden flex-col items-center justify-center p-8 flex-grow text-center w-full">
+        <section id="question-count-screen"
+            class="hidden flex-col items-center justify-center p-8 flex-grow text-center w-full">
             <div class="w-full flex justify-start mb-4">
-                <button onclick="showScreen('start')" class="text-slate-400 hover:text-white flex items-center gap-2 transition-colors px-3 py-1.5 bg-slate-800/50 rounded-lg border border-slate-700/50">
+                <button onclick="showScreen('start')"
+                    class="text-slate-400 hover:text-white flex items-center gap-2 transition-colors px-3 py-1.5 bg-slate-800/50 rounded-lg border border-slate-700/50">
                     <i class="ph ph-arrow-left"></i> Main Menu
                 </button>
             </div>
-            
+
             <div class="flex-grow flex flex-col items-center justify-center w-full">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-indigo-500/10 rounded-2xl text-indigo-400 border border-indigo-500/20 shadow-[0_0_20px_rgba(99,102,241,0.15)] mb-6">
+                <div
+                    class="inline-flex items-center justify-center w-16 h-16 bg-indigo-500/10 rounded-2xl text-indigo-400 border border-indigo-500/20 shadow-[0_0_20px_rgba(99,102,241,0.15)] mb-6">
                     <i class="ph ph-list-numbers text-4xl"></i>
                 </div>
                 <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-white">Select Question Count</h2>
-                <p class="text-slate-400 text-sm mb-8 max-w-sm">How many questions would you like to attempt for <br><span id="count-sector-label" class="text-indigo-300 font-semibold uppercase tracking-wider"></span>?</p>
-                
+                <p class="text-slate-400 text-sm mb-8 max-w-sm">How many questions would you like to attempt for
+                    <br><span id="count-sector-label"
+                        class="text-indigo-300 font-semibold uppercase tracking-wider"></span>?
+                </p>
+
                 <div class="grid grid-cols-2 gap-4 w-full max-w-[280px]">
-                    <button onclick="startQuizWithCount(5)" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-4 font-bold text-2xl text-slate-200 hover:text-white hover:bg-indigo-600/80 hover:border-indigo-400 transition-all shadow-sm">5</button>
-                    <button onclick="startQuizWithCount(10)" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-4 font-bold text-2xl text-slate-200 hover:text-white hover:bg-indigo-600/80 hover:border-indigo-400 transition-all shadow-sm">10</button>
-                    <button onclick="startQuizWithCount(15)" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-4 font-bold text-2xl text-slate-200 hover:text-white hover:bg-indigo-600/80 hover:border-indigo-400 transition-all shadow-sm">15</button>
-                    <button onclick="startQuizWithCount('ALL')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-4 font-bold text-xl text-slate-200 hover:text-white hover:bg-indigo-600/80 hover:border-indigo-400 transition-all shadow-sm flex items-center justify-center">ALL</button>
+                    <button onclick="startQuizWithCount(5)"
+                        class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-4 font-bold text-2xl text-slate-200 hover:text-white hover:bg-indigo-600/80 hover:border-indigo-400 transition-all shadow-sm">5</button>
+                    <button onclick="startQuizWithCount(10)"
+                        class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-4 font-bold text-2xl text-slate-200 hover:text-white hover:bg-indigo-600/80 hover:border-indigo-400 transition-all shadow-sm">10</button>
+                    <button onclick="startQuizWithCount(15)"
+                        class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-4 font-bold text-2xl text-slate-200 hover:text-white hover:bg-indigo-600/80 hover:border-indigo-400 transition-all shadow-sm">15</button>
+                    <button onclick="startQuizWithCount('ALL')"
+                        class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-4 font-bold text-xl text-slate-200 hover:text-white hover:bg-indigo-600/80 hover:border-indigo-400 transition-all shadow-sm flex items-center justify-center">ALL</button>
                 </div>
             </div>
         </section>
@@ -176,31 +209,39 @@
              QUIZ SCREEN
         =========================================== -->
         <section id="quiz-screen" class="hidden flex-col flex-grow w-full">
-            
+
             <!-- Quiz Header -->
             <header class="p-5 md:p-6 pb-4 border-b border-slate-700/50">
                 <div class="flex justify-between items-center mb-4">
                     <!-- Top Left: Exit Button -->
-                    <button onclick="exitQuiz()" class="text-slate-400 hover:text-red-400 flex items-center gap-1.5 text-sm font-medium transition-colors bg-slate-800/50 hover:bg-slate-700/50 px-3 py-1.5 rounded-lg border border-slate-700/50">
+                    <button onclick="exitQuiz()"
+                        class="text-slate-400 hover:text-red-400 flex items-center gap-1.5 text-sm font-medium transition-colors bg-slate-800/50 hover:bg-slate-700/50 px-3 py-1.5 rounded-lg border border-slate-700/50">
                         <i class="ph ph-x-circle text-lg"></i>
                         Exit
                     </button>
-                    
+
                     <!-- Top Center: Sector & Progress Info -->
                     <div class="flex flex-col items-center">
-                        <span id="active-sector-label" class="text-[10px] text-indigo-300 uppercase tracking-widest font-bold mb-0.5">TOWER CONTROL</span>
-                        <span id="question-counter" class="text-xs md:text-sm font-semibold text-slate-300 tracking-widest uppercase">Q 1 / 10</span>
+                        <span id="active-sector-label"
+                            class="text-[10px] text-indigo-300 uppercase tracking-widest font-bold mb-0.5">TOWER
+                            CONTROL</span>
+                        <span id="question-counter"
+                            class="text-xs md:text-sm font-semibold text-slate-300 tracking-widest uppercase">Q 1 /
+                            10</span>
                     </div>
-                    
+
                     <!-- Top Right: Score Info -->
-                    <span class="text-sm font-bold text-emerald-400 flex items-center gap-1.5 bg-emerald-900/20 px-3 py-1.5 rounded-lg border border-emerald-500/20">
+                    <span
+                        class="text-sm font-bold text-emerald-400 flex items-center gap-1.5 bg-emerald-900/20 px-3 py-1.5 rounded-lg border border-emerald-500/20">
                         <i class="ph-fill ph-star"></i> <span id="current-score">0</span>
                     </span>
                 </div>
-                
+
                 <!-- Progress Bar Container -->
                 <div class="w-full bg-slate-900 rounded-full h-2 overflow-hidden border border-slate-700/50">
-                    <div id="progress-bar" class="bg-gradient-to-r from-blue-500 to-indigo-500 h-2 rounded-full transition-all duration-500 ease-out" style="width: 0%"></div>
+                    <div id="progress-bar"
+                        class="bg-gradient-to-r from-blue-500 to-indigo-500 h-2 rounded-full transition-all duration-500 ease-out"
+                        style="width: 0%"></div>
                 </div>
             </header>
 
@@ -208,10 +249,13 @@
             <div class="p-5 md:p-6 flex-grow flex flex-col">
                 <!-- Status badge (shows if in review mode) -->
                 <div id="review-badge" class="hidden mb-3">
-                    <span class="text-xs font-semibold px-2 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/30 rounded-md uppercase tracking-wider">Review Mode</span>
+                    <span
+                        class="text-xs font-semibold px-2 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/30 rounded-md uppercase tracking-wider">Review
+                        Mode</span>
                 </div>
 
-                <h2 id="question-text" class="text-lg md:text-xl lg:text-2xl font-semibold mb-6 leading-relaxed text-slate-100">
+                <h2 id="question-text"
+                    class="text-lg md:text-xl lg:text-2xl font-semibold mb-6 leading-relaxed text-slate-100">
                     <!-- Question injected via JS -->
                 </h2>
 
@@ -221,18 +265,21 @@
             </div>
 
             <!-- Quiz Footer (Navigation Controls) -->
-            <footer class="p-5 md:p-6 pt-4 border-t border-slate-700/50 flex justify-between items-center mt-auto bg-slate-800/50">
+            <footer
+                class="p-5 md:p-6 pt-4 border-t border-slate-700/50 flex justify-between items-center mt-auto bg-slate-800/50">
                 <!-- Bottom Left: Back Button -->
                 <div>
-                    <button id="back-btn" onclick="prevQuestion()" class="hidden px-5 py-3 bg-slate-700 hover:bg-slate-600 rounded-xl font-medium transition-colors flex items-center gap-2 border border-slate-600/50 text-slate-200 shadow-sm">
+                    <button id="back-btn" onclick="prevQuestion()"
+                        class="hidden px-5 py-3 bg-slate-700 hover:bg-slate-600 rounded-xl font-medium transition-colors flex items-center gap-2 border border-slate-600/50 text-slate-200 shadow-sm">
                         <i class="ph ph-caret-left font-bold"></i>
                         Back
                     </button>
                 </div>
-                
+
                 <!-- Bottom Right: Next Button with Progress Bar -->
                 <div>
-                    <button id="next-btn" onclick="nextQuestion()" class="hidden relative overflow-hidden px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-medium transition-colors shadow-lg shadow-indigo-500/25 group">
+                    <button id="next-btn" onclick="nextQuestion()"
+                        class="hidden relative overflow-hidden px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-medium transition-colors shadow-lg shadow-indigo-500/25 group">
                         <!-- Progress overlay -->
                         <div id="next-btn-progress" class="absolute left-0 top-0 h-full bg-white/20 w-0 z-0"></div>
                         <!-- Button content -->
@@ -252,28 +299,38 @@
             <div id="result-icon" class="w-24 h-24 rounded-full flex items-center justify-center mb-6 text-5xl">
                 <!-- Icon injected via JS -->
             </div>
-            
+
             <h2 id="result-title" class="text-3xl md:text-4xl font-bold mb-2 text-white">Evaluation Complete</h2>
-            <p id="result-message" class="text-slate-400 mb-8 text-base max-w-sm">Here is your operational assessment for <span id="result-sector" class="font-semibold text-slate-300"></span>.</p>
-            
-            <div class="bg-slate-900/60 rounded-2xl p-6 w-full max-w-[250px] mb-10 border border-slate-700/50 shadow-inner">
+            <p id="result-message" class="text-slate-400 mb-8 text-base max-w-sm">Here is your operational assessment
+                for <span id="result-sector" class="font-semibold text-slate-300"></span>.</p>
+
+            <div
+                class="bg-slate-900/60 rounded-2xl p-6 w-full max-w-[250px] mb-10 border border-slate-700/50 shadow-inner">
                 <p class="text-xs text-slate-400 uppercase tracking-widest mb-2 font-medium">Score Achieved</p>
                 <div class="flex justify-center items-baseline gap-2">
-                    <span id="final-score-value" class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">0</span>
+                    <span id="final-score-value"
+                        class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">0</span>
                     <span class="text-2xl text-slate-500 font-bold">/ <span id="total-questions">0</span></span>
                 </div>
             </div>
-
-            <button onclick="showScreen('start')" class="w-full sm:w-auto px-10 py-4 bg-slate-700 hover:bg-slate-600 text-white rounded-xl font-semibold transition-colors duration-200 flex items-center justify-center gap-3 border border-slate-600 text-base shadow-sm">
-                <i class="ph ph-squares-four font-bold text-xl"></i>
-                Return to Main Menu
-            </button>
+            <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+                <button onclick="reviewQuiz()"
+                    class="w-full sm:w-auto px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-semibold transition-colors duration-200 flex items-center justify-center gap-3 shadow-lg shadow-indigo-500/25 text-base">
+                    <i class="ph ph-magnifying-glass font-bold text-xl"></i>
+                    Review Quiz
+                </button>
+                <button onclick="showScreen('start')"
+                    class="w-full sm:w-auto px-8 py-4 bg-slate-700 hover:bg-slate-600 text-white rounded-xl font-semibold transition-colors duration-200 flex items-center justify-center gap-3 border border-slate-600 text-base shadow-sm">
+                    <i class="ph ph-squares-four font-bold text-xl"></i>
+                    Main Menu
+                </button>
+            </div>
         </section>
 
     </main>
 
     <script>
-        
+
         let quizData = {};
 
         // Fetch the questions from the external JSON file
@@ -286,9 +343,9 @@
                 }
                 quizData = await response.json();
                 console.log("Questions loaded successfully");
-                
+
                 showScreen('start');
-                
+
             } catch (error) {
                 console.error("Could not load the quiz data:", error);
                 alert("Failed to load quiz questions. Please try refreshing.");
@@ -319,7 +376,7 @@
             quiz: document.getElementById('quiz-screen'),
             result: document.getElementById('result-screen')
         };
-        
+
         const ui = {
             subcatTitle: document.getElementById('subcat-title'),
             subcatContainer: document.getElementById('subcat-container'),
@@ -344,18 +401,18 @@
         /* =============================================================
          * CORE FUNCTIONS
          * ============================================================= */
-        
+
         function showScreen(screenName) {
             Object.values(screens).forEach(screen => {
                 screen.classList.add('hidden');
                 screen.classList.remove('flex', 'screen-enter');
             });
-            
+
             screens[screenName].classList.remove('hidden');
             // Force reflow
-            void screens[screenName].offsetWidth; 
+            void screens[screenName].offsetWidth;
             screens[screenName].classList.add('flex', 'screen-enter');
-            
+
             // Clear any lingering timeouts if navigating away from quiz
             if (screenName !== 'quiz') {
                 clearTimer();
@@ -364,7 +421,7 @@
 
         function handleMainCategory(mainCategory) {
             const data = quizData[mainCategory];
-            
+
             // Check if the data contains an array (direct questions) or object (sub-categories)
             if (Array.isArray(data)) {
                 // It's a direct category like RCC or FIC
@@ -381,7 +438,7 @@
         function buildSubcategories(mainCategory, subcatsObject) {
             ui.subcatTitle.textContent = mainCategory;
             ui.subcatContainer.innerHTML = '';
-            
+
             Object.keys(subcatsObject).forEach(subcatName => {
                 const btn = document.createElement('button');
                 btn.className = 'category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-5 flex items-center justify-between text-left group hover:bg-slate-700 hover:border-indigo-500/50 w-full';
@@ -402,19 +459,19 @@
                 alert(`No questions available for ${label} yet. Please update the data store.`);
                 return;
             }
-            
+
             // Save the questions temporarily and show the selection screen
             pendingQuestions = questionsArray;
             currentCategoryLabel = label;
             ui.countSectorLabel.textContent = label;
-            
+
             showScreen('count');
         }
 
         function startQuizWithCount(count) {
             // Shuffle the master list first
             let shuffled = shuffleArray(pendingQuestions);
-            
+
             // Slice the array based on the user's choice
             if (count === 'ALL') {
                 activeQuestions = shuffled;
@@ -422,16 +479,16 @@
                 // Math.min ensures if they ask for 15 but only 8 exist, it doesn't crash
                 activeQuestions = shuffled.slice(0, Math.min(count, shuffled.length));
             }
-            
+
             // Reset state
             currentQuestionIndex = 0;
             score = 0;
             userAnswers = {};
             clearTimer();
-            
+
             ui.currentScore.textContent = score;
             ui.activeSectorLabel.textContent = currentCategoryLabel;
-            
+
             showScreen('quiz');
             loadQuestion();
         }
@@ -441,7 +498,7 @@
                 clearTimeout(autoAdvanceTimeout);
                 autoAdvanceTimeout = null;
             }
-            
+
             // Reset the Next button progress bar
             const nextProgress = document.getElementById('next-btn-progress');
             if (nextProgress) {
@@ -452,7 +509,7 @@
 
         function loadQuestion() {
             clearTimer(); // Safety: Kill any pending auto-advance
-            
+
             const currentQuestion = activeQuestions[currentQuestionIndex];
             const savedAnswerIndex = userAnswers[currentQuestionIndex];
             const isAlreadyAnswered = savedAnswerIndex !== undefined;
@@ -467,7 +524,7 @@
             ui.questionCounter.textContent = `Q ${currentQuestionIndex + 1} / ${activeQuestions.length}`;
             const progressPercentage = ((currentQuestionIndex) / activeQuestions.length) * 100;
             ui.progressBar.style.width = `${progressPercentage}%`;
-            
+
             // Render text
             ui.questionText.textContent = currentQuestion.question;
 
@@ -482,17 +539,17 @@
                 img.className = 'w-full max-h-64 object-contain rounded-xl mb-6 border border-slate-700/50 bg-slate-900/50 p-2';
                 ui.questionText.insertAdjacentElement('afterend', img);
             }
-            
+
             // Render options
             currentQuestion.options.forEach((option, index) => {
                 const btn = document.createElement('button');
                 btn.className = 'option-btn w-full text-left p-4 rounded-xl border border-slate-600 bg-slate-700/50 focus:outline-none focus:ring-2 focus:ring-indigo-500 font-medium text-slate-200 text-sm md:text-base flex justify-between items-center';
-                
+
                 const letter = String.fromCharCode(65 + index); // A, B, C, D
                 const contentSpan = document.createElement('span');
                 contentSpan.innerHTML = `<span class="inline-block w-7 text-slate-400 font-bold">${letter}</span> ${option}`;
                 btn.appendChild(contentSpan);
-                
+
                 // Interaction logic
                 btn.onclick = () => selectOption(index, btn);
 
@@ -500,13 +557,13 @@
                 if (isAlreadyAnswered) {
                     btn.disabled = true;
                     btn.classList.add('disabled-option');
-                    
+
                     // Highlight correct answer
                     if (index === currentQuestion.correctAnswer) {
                         btn.classList.remove('disabled-option', 'bg-slate-700/50', 'border-slate-600');
                         btn.classList.add('correct-answer');
                         btn.innerHTML += '<i class="ph-bold ph-check text-xl"></i>';
-                    } 
+                    }
                     // Highlight user's incorrect choice
                     else if (index === savedAnswerIndex) {
                         btn.classList.remove('disabled-option', 'bg-slate-700/50', 'border-slate-600');
@@ -514,18 +571,18 @@
                         btn.innerHTML += '<i class="ph-bold ph-x text-xl"></i>';
                     }
                 }
-                
+
                 ui.optionsContainer.appendChild(btn);
             });
         }
 
         function selectOption(selectedIndex, selectedElement) {
             if (userAnswers[currentQuestionIndex] !== undefined) return; // Prevent multi-clicks
-            
+
             const currentQuestion = activeQuestions[currentQuestionIndex];
             const isCorrect = selectedIndex === currentQuestion.correctAnswer;
             const allOptions = ui.optionsContainer.children;
-            
+
             // 1. Record the answer in history
             userAnswers[currentQuestionIndex] = selectedIndex;
 
@@ -544,7 +601,7 @@
                 const btn = allOptions[i];
                 btn.disabled = true;
                 btn.classList.add('disabled-option');
-                
+
                 if (i === currentQuestion.correctAnswer) {
                     btn.classList.remove('disabled-option', 'bg-slate-700/50', 'border-slate-600');
                     btn.classList.add('correct-answer');
@@ -566,14 +623,14 @@
                 // Reset the progress bar width immediately
                 nextProgress.style.transition = 'none';
                 nextProgress.style.width = '0%';
-                
+
                 // Force the browser to register the 0% width before animating
-                void nextProgress.offsetWidth; 
-                
+                void nextProgress.offsetWidth;
+
                 // Start the 2-second fill animation
                 nextProgress.style.transition = 'width 2s linear';
                 nextProgress.style.width = '100%';
-                
+
                 // Jump to the next question when the animation finishes
                 autoAdvanceTimeout = setTimeout(() => {
                     nextQuestion();
@@ -584,7 +641,7 @@
         function nextQuestion() {
             clearTimer(); // Safety
             currentQuestionIndex++;
-            
+
             if (currentQuestionIndex < activeQuestions.length) {
                 loadQuestion();
             } else {
@@ -599,24 +656,24 @@
                 loadQuestion();
             }
         }
-        
+
         function exitQuiz() {
             clearTimer(); // Safety
-            finishQuiz(); 
+            finishQuiz();
         }
 
         function finishQuiz() {
             ui.progressBar.style.width = '100%';
-            
+
             setTimeout(() => {
                 showScreen('result');
-                
+
                 ui.finalScoreValue.textContent = score;
                 ui.totalQuestions.textContent = activeQuestions.length;
                 ui.resultSector.textContent = currentCategoryLabel;
-                
+
                 const percentage = activeQuestions.length > 0 ? (score / activeQuestions.length) * 100 : 0;
-                
+
                 if (percentage === 100) {
                     ui.resultIcon.className = "w-24 h-24 rounded-full flex items-center justify-center mb-6 text-6xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30";
                     ui.resultIcon.innerHTML = '<i class="ph ph-check-circle"></i>';
@@ -636,9 +693,18 @@
             }, 200);
         }
 
+        function reviewQuiz() {
+            // Reset the index back to the first question
+            currentQuestionIndex = 0;
+
+            // Switch back to the quiz screen
+            showScreen('quiz');
+            loadQuestion();
+        }
+
         // Standard Fisher-Yates shuffle algorithm
         function shuffleArray(array) {
-            const shuffled = [...array]; 
+            const shuffled = [...array];
             for (let i = shuffled.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
@@ -648,4 +714,5 @@
 
     </script>
 </body>
+
 </html>
