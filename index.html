@@ -40,7 +40,7 @@
         }
         .option-btn:hover:not(:disabled) {
             transform: translateY(-2px);
-            background-color: rgba(71, 85, 105, 0.8); /* hover state for slate-600 */
+            background-color: rgba(71, 85, 105, 0.8);
         }
         .option-btn:active:not(:disabled) {
             transform: translateY(0);
@@ -56,16 +56,16 @@
 
         /* Correct Answer Styling */
         .correct-answer {
-            background-color: #10b981 !important; /* Emerald 500 */
-            border-color: #059669 !important; /* Emerald 600 */
+            background-color: #10b981 !important;
+            border-color: #059669 !important;
             color: white !important;
             transform: translateY(0) !important;
         }
         
         /* Wrong Answer Styling */
         .wrong-answer {
-            background-color: #ef4444 !important; /* Red 500 */
-            border-color: #dc2626 !important; /* Red 600 */
+            background-color: #ef4444 !important;
+            border-color: #dc2626 !important;
             color: white !important;
             opacity: 0.9;
             transform: translateY(0) !important;
@@ -89,7 +89,7 @@
         <!-- ==========================================
              START SCREEN (MAIN CATEGORIES)
         =========================================== -->
-        <section id="start-screen" class="flex flex-col p-8 flex-grow screen-enter">
+        <section id="start-screen" class="hidden flex-col p-8 flex-grow screen-enter">
             <div class="text-center mb-8 mt-4">
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-indigo-500/10 rounded-2xl text-indigo-400 border border-indigo-500/20 shadow-[0_0_20px_rgba(99,102,241,0.15)] mb-4">
                     <i class="ph ph-radar text-4xl"></i>
@@ -99,13 +99,10 @@
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-grow content-center max-w-lg mx-auto w-full">
-                <!-- New ATC BASICS Button -->
                 <button onclick="handleMainCategory('ATC BASICS')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
-                <i class="ph ph-book-open text-3xl text-cyan-400 group-hover:text-cyan-300 transition-colors"></i>
-                <span class="font-semibold text-lg tracking-wide text-center">ATC BASICS</span>
+                    <i class="ph ph-book-open text-3xl text-cyan-400 group-hover:text-cyan-300 transition-colors"></i>
+                    <span class="font-semibold text-lg tracking-wide text-center">ATC BASICS</span>
                 </button>
-
-                <!-- New ICAO RULES Button -->
                 <button onclick="handleMainCategory('ICAO RULES')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:bg-slate-700 hover:border-indigo-500/50">
                     <i class="ph ph-globe-hemisphere-west text-3xl text-violet-400 group-hover:text-violet-300 transition-colors"></i>
                     <span class="font-semibold text-lg tracking-wide text-center">ICAO RULES</span>
@@ -146,6 +143,32 @@
             
             <div id="subcat-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-grow content-start max-w-lg mx-auto w-full">
                 <!-- Subcategory buttons injected via JS -->
+            </div>
+        </section>
+
+        <!-- ==========================================
+             QUESTION COUNT SCREEN
+        =========================================== -->
+        <section id="question-count-screen" class="hidden flex-col items-center justify-center p-8 flex-grow text-center w-full">
+            <div class="w-full flex justify-start mb-4">
+                <button onclick="showScreen('start')" class="text-slate-400 hover:text-white flex items-center gap-2 transition-colors px-3 py-1.5 bg-slate-800/50 rounded-lg border border-slate-700/50">
+                    <i class="ph ph-arrow-left"></i> Main Menu
+                </button>
+            </div>
+            
+            <div class="flex-grow flex flex-col items-center justify-center w-full">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-indigo-500/10 rounded-2xl text-indigo-400 border border-indigo-500/20 shadow-[0_0_20px_rgba(99,102,241,0.15)] mb-6">
+                    <i class="ph ph-list-numbers text-4xl"></i>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-white">Select Question Count</h2>
+                <p class="text-slate-400 text-sm mb-8 max-w-sm">How many questions would you like to attempt for <br><span id="count-sector-label" class="text-indigo-300 font-semibold uppercase tracking-wider"></span>?</p>
+                
+                <div class="grid grid-cols-2 gap-4 w-full max-w-[280px]">
+                    <button onclick="startQuizWithCount(5)" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-4 font-bold text-2xl text-slate-200 hover:text-white hover:bg-indigo-600/80 hover:border-indigo-400 transition-all shadow-sm">5</button>
+                    <button onclick="startQuizWithCount(10)" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-4 font-bold text-2xl text-slate-200 hover:text-white hover:bg-indigo-600/80 hover:border-indigo-400 transition-all shadow-sm">10</button>
+                    <button onclick="startQuizWithCount(15)" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-4 font-bold text-2xl text-slate-200 hover:text-white hover:bg-indigo-600/80 hover:border-indigo-400 transition-all shadow-sm">15</button>
+                    <button onclick="startQuizWithCount('ALL')" class="category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-4 font-bold text-xl text-slate-200 hover:text-white hover:bg-indigo-600/80 hover:border-indigo-400 transition-all shadow-sm flex items-center justify-center">ALL</button>
+                </div>
             </div>
         </section>
 
@@ -248,31 +271,31 @@
         
         let quizData = {};
 
-// Fetch the questions from the external JSON file
-async function loadQuizData() {
-    try {
-        const response = await fetch('questions.json');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+        // Fetch the questions from the external JSON file
+        async function loadQuizData() {
+            try {
+                const response = await fetch('questions.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                quizData = await response.json();
+                console.log("Questions loaded successfully");
+                
+                showScreen('start');
+                
+            } catch (error) {
+                console.error("Could not load the quiz data:", error);
+                alert("Failed to load quiz questions. Please try refreshing.");
+            }
         }
-        quizData = await response.json();
-        console.log("Questions loaded successfully");
-        
-        // ADD THIS LINE: Force the app to render the home screen ONLY AFTER data is loaded
-        showScreen('start'); // (or whatever function draws your initial categories)
-        
-    } catch (error) {
-        console.error("Could not load the quiz data:", error);
-        alert("Failed to load quiz questions. Please try refreshing.");
-    }
-}
 
-// Call this function right when the script runs
-loadQuizData();
+        // Call this function right when the script runs
+        loadQuizData();
 
         /* =============================================================
          * STATE VARIABLES
          * ============================================================= */
+        let pendingQuestions = [];
         let activeQuestions = [];
         let currentQuestionIndex = 0;
         let score = 0;
@@ -286,6 +309,7 @@ loadQuizData();
         const screens = {
             start: document.getElementById('start-screen'),
             subcat: document.getElementById('subcategory-screen'),
+            count: document.getElementById('question-count-screen'),
             quiz: document.getElementById('quiz-screen'),
             result: document.getElementById('result-screen')
         };
@@ -293,6 +317,7 @@ loadQuizData();
         const ui = {
             subcatTitle: document.getElementById('subcat-title'),
             subcatContainer: document.getElementById('subcat-container'),
+            countSectorLabel: document.getElementById('count-sector-label'),
             activeSectorLabel: document.getElementById('active-sector-label'),
             questionText: document.getElementById('question-text'),
             optionsContainer: document.getElementById('options-container'),
@@ -337,7 +362,7 @@ loadQuizData();
             // Check if the data contains an array (direct questions) or object (sub-categories)
             if (Array.isArray(data)) {
                 // It's a direct category like RCC or FIC
-                startCategoryQuiz(data, mainCategory);
+                showQuestionCountScreen(data, mainCategory);
             } else if (typeof data === 'object') {
                 // It has subcategories like TERMINAL or ENROUTE
                 buildSubcategories(mainCategory, data);
@@ -360,20 +385,37 @@ loadQuizData();
                 `;
                 btn.onclick = () => {
                     const questionsArray = subcatsObject[subcatName];
-                    startCategoryQuiz(questionsArray, `${mainCategory} - ${subcatName}`);
+                    showQuestionCountScreen(questionsArray, `${mainCategory} - ${subcatName}`);
                 };
                 ui.subcatContainer.appendChild(btn);
             });
         }
 
-        function startCategoryQuiz(questionsArray, label) {
+        function showQuestionCountScreen(questionsArray, label) {
             if (!questionsArray || questionsArray.length === 0) {
                 alert(`No questions available for ${label} yet. Please update the data store.`);
                 return;
             }
             
-            activeQuestions = questionsArray;
+            // Save the questions temporarily and show the selection screen
+            pendingQuestions = questionsArray;
             currentCategoryLabel = label;
+            ui.countSectorLabel.textContent = label;
+            
+            showScreen('count');
+        }
+
+        function startQuizWithCount(count) {
+            // Shuffle the master list first
+            let shuffled = shuffleArray(pendingQuestions);
+            
+            // Slice the array based on the user's choice
+            if (count === 'ALL') {
+                activeQuestions = shuffled;
+            } else {
+                // Math.min ensures if they ask for 15 but only 8 exist, it doesn't crash
+                activeQuestions = shuffled.slice(0, Math.min(count, shuffled.length));
+            }
             
             // Reset state
             currentQuestionIndex = 0;
@@ -415,6 +457,18 @@ loadQuizData();
             
             // Render text
             ui.questionText.textContent = currentQuestion.question;
+
+            // Render Image (if exists)
+            const existingImg = document.getElementById('question-image');
+            if (existingImg) existingImg.remove();
+
+            if (currentQuestion.image) {
+                const img = document.createElement('img');
+                img.id = 'question-image';
+                img.src = currentQuestion.image;
+                img.className = 'w-full max-h-64 object-contain rounded-xl mb-6 border border-slate-700/50 bg-slate-900/50 p-2';
+                ui.questionText.insertAdjacentElement('afterend', img);
+            }
             
             // Render options
             currentQuestion.options.forEach((option, index) => {
@@ -555,6 +609,17 @@ loadQuizData();
                 }
             }, 200);
         }
+
+        // Standard Fisher-Yates shuffle algorithm
+        function shuffleArray(array) {
+            const shuffled = [...array]; 
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
     </script>
 </body>
 </html>
