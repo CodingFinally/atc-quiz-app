@@ -442,10 +442,23 @@
             Object.keys(subcatsObject).forEach(subcatName => {
                 const btn = document.createElement('button');
                 btn.className = 'category-btn bg-slate-700/50 border border-slate-600 rounded-2xl p-5 flex items-center justify-between text-left group hover:bg-slate-700 hover:border-indigo-500/50 w-full';
+                // --- REPLACE THE innerHTML BLOCK WITH THIS ---
+                const fullLabel = `${mainCategory} - ${subcatName}`;
+                const savedData = JSON.parse(localStorage.getItem('atc_score_' + fullLabel) || 'null');
+
+                let scoreBadge = '';
+                if (savedData) {
+                    // Create a visual badge showing their best past performance
+                    scoreBadge = `<span class="ml-3 px-2 py-1 text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-md shadow-sm">Best: ${savedData.score}/${savedData.total}</span>`;
+                }
+
                 btn.innerHTML = `
+                <div class="flex items-center">
                     <span class="font-semibold text-base md:text-lg tracking-wide text-slate-200 group-hover:text-white transition-colors">${subcatName}</span>
-                    <i class="ph ph-caret-right text-slate-500 group-hover:text-indigo-400 transition-colors"></i>
-                `;
+                    ${scoreBadge}
+                </div>
+                <i class="ph ph-caret-right text-slate-500 group-hover:text-indigo-400 transition-colors"></i>
+            `;
                 btn.onclick = () => {
                     const questionsArray = subcatsObject[subcatName];
                     showQuestionCountScreen(questionsArray, `${mainCategory} - ${subcatName}`);
@@ -673,6 +686,20 @@
                 ui.resultSector.textContent = currentCategoryLabel;
 
                 const percentage = activeQuestions.length > 0 ? (score / activeQuestions.length) * 100 : 0;
+
+                // --- ADD THIS LOCALSTORAGE BLOCK ---
+                // Retrieve existing score data for this specific sector
+                const storageKey = 'atc_score_' + currentCategoryLabel;
+                const storedData = JSON.parse(localStorage.getItem(storageKey) || 'null');
+
+                // If there is no previous score, or the new percentage is equal to or higher than the old one, save it
+                if (!storedData || percentage >= storedData.percentage) {
+                    localStorage.setItem(storageKey, JSON.stringify({
+                        score: score,
+                        total: activeQuestions.length,
+                        percentage: percentage
+                    }));
+                }
 
                 if (percentage === 100) {
                     ui.resultIcon.className = "w-24 h-24 rounded-full flex items-center justify-center mb-6 text-6xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30";
