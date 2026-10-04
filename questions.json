@@ -1690,6 +1690,1076 @@
                     "The automated flight plan transfers to the next sector."
                 ],
                 "correctAnswer": 2
+            },
+            {
+                "question": "Which category of ATS Station does the Chennai Aerodrome Control Tower and Approach Control unit fall under based on average daily aircraft movements?",
+                "options": [
+                    "Category A term (> 400 movements)",
+                    "Category B term (> 100 but <= 400 movements)",
+                    "Category C term (> 30 but <= 100 movements)",
+                    "Category D term (<= 30 movements)"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "What is the standard On-the-Job Training (OJT) requirement for a trainee acquiring an Approach Control Procedural and Approach Control Surveillance (Combined) rating?",
+                "options": [
+                    "45 days / 90 Hrs",
+                    "60 days / 120 Hrs",
+                    "90 days / 180 Hrs",
+                    "120 days / 240 Hrs"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the reduced OJT requirement if a controller holds the same rating from another Category A term station?",
+                "options": [
+                    "45 Days / 90 Hrs",
+                    "60 Days / 120 Hrs",
+                    "90 Days / 180 Hrs",
+                    "120 Days / 240 Hrs"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "For a 180-hour OJT requirement, what is the minimum distribution of hours between the ARRIVAL and DEPARTURE sectors in bifurcated mode?",
+                "options": [
+                    "5% each",
+                    "10% each",
+                    "15% each",
+                    "20% each"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the passing criteria for the written progress test upon completion of Transitional OJT (Module 1)?",
+                "options": [
+                    "70%",
+                    "75%",
+                    "80%",
+                    "85%"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "How many simulator exercises are required for Approach control surveillance service during Pre OJT- Simulator Training-Phase I?",
+                "options": [
+                    "4 exercises",
+                    "6 exercises",
+                    "8 exercises",
+                    "10 exercises"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "What is the duration of the Performance Improvement Programme (PIP) if a trainee does not meet the qualification criteria in the skill assessment?",
+                "options": [
+                    "10% of stipulated OJT hours",
+                    "20% of stipulated OJT hours",
+                    "30% of stipulated OJT hours, but not less than 10 hours",
+                    "40% of stipulated OJT hours, but not less than 15 hours"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Which of the following describes a 'Control Zone' (CTR)?",
+                "options": [
+                    "Airspace extending upwards from a specified limit above the earth.",
+                    "Controlled airspace around an airport extending from the surface of the earth to a specified upper limit.",
+                    "Airspace where Air Traffic Control service is not deemed necessary.",
+                    "A non-permanent ATS route planned under special conditions."
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In Class C airspace, what is the speed limitation for VFR flights operating below F100?",
+                "options": [
+                    "No speed limit",
+                    "200 KTS IAS",
+                    "250 KTS IAS",
+                    "300 KTS IAS"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What are the lateral and vertical limits of the Chennai Departure Sector (DEP) (excluding the vertical and lateral limits of respective ARR Sector)?",
+                "options": [
+                    "30 NM radius, GND to FL 145",
+                    "40 NM radius, GND to FL 100",
+                    "50 NM radius, GND to FL 145",
+                    "60 NM radius, GND to FL 150"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the lateral limit of the Chennai Control Zone?",
+                "options": [
+                    "A circle of radius 10 NM centered at MMV VOR",
+                    "A circle of radius 15 NM centered at MMV VOR",
+                    "A circle of radius 20 NM centered at MMV VOR",
+                    "A circle of radius 25 NM centered at MMV VOR"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "What is the Transition Altitude at the Chennai Aerodrome?",
+                "options": [
+                    "3000 ft",
+                    "4000 ft",
+                    "5000 ft",
+                    "6000 ft"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the Transition Level at Chennai when the QNH is 1014 Hpa or greater?",
+                "options": [
+                    "F045",
+                    "F050",
+                    "F055",
+                    "F060"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the Minimum Sector Altitude (MSA) up to 10NM from the MMV VOR?",
+                "options": [
+                    "1500 feet",
+                    "1800 feet",
+                    "2300 feet",
+                    "3000 feet"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What are the vertical limits of the Kalpakkam Prohibited Area (VOP-193)?",
+                "options": [
+                    "5000Ft / GND",
+                    "10000Ft / GND",
+                    "15000Ft / GND",
+                    "UNL / GND"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What are the vertical limits of the Chengalpattu Danger Area (VOD 188)?",
+                "options": [
+                    "10000FT / GND",
+                    "15000FT / GND",
+                    "19000FT / GND",
+                    "UNL / GND"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the upper vertical limit of the Tambaram Restricted Area VOR 183(B)?",
+                "options": [
+                    "FL100",
+                    "FL150",
+                    "FL200",
+                    "FL255"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "What is the upper vertical limit of the Tirupati (VOTP) Control Zone?",
+                "options": [
+                    "FL 055",
+                    "FL 085",
+                    "FL 095",
+                    "FL 145"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the lateral limit radius of the Pondicherry (VOPC) Control Zone from the NDB OM?",
+                "options": [
+                    "10 NM",
+                    "15 NM",
+                    "20 NM",
+                    "25 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the bearing and distance of INS Rajali (Arakkonam) from MMV?",
+                "options": [
+                    "213 Degrees at 6 NM",
+                    "268 Degrees at 65 NM",
+                    "282 Degrees at 28 NM",
+                    "318 Degrees at 54 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Which regulatory body is responsible for carrying out safety oversight and regulatory functions in civil aviation in India?",
+                "options": [
+                    "Bureau of Civil Aviation Security",
+                    "Directorate General of Civil Aviation (DGCA)",
+                    "Aircraft Accidents Investigation Bureau",
+                    "Airports Authority of India (AAI)"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Which series of the DGCA Civil Aviation Requirements (CARs) specifically deals with ATCO Licensing?",
+                "options": [
+                    "Series C",
+                    "Series E",
+                    "Series I",
+                    "Series L"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "Essential traffic information provided to controlled flights shall include which of the following details?",
+                "options": [
+                    "Fuel on board and number of passengers",
+                    "Direction of flight, type of aircraft, and cruising level",
+                    "Name of the pilot and aircraft registration",
+                    "Weather radar feedback and alternative routes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the time-based wake turbulence separation applied to a HEAVY aircraft landing behind a SUPER aircraft?",
+                "options": [
+                    "1 minute",
+                    "2 minutes",
+                    "3 minutes",
+                    "4 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the time-based wake turbulence separation applied to a LIGHT aircraft landing behind a MEDIUM aircraft?",
+                "options": [
+                    "2 minutes",
+                    "3 minutes",
+                    "4 minutes",
+                    "5 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the time-based wake turbulence separation applied to a MEDIUM aircraft landing behind a HEAVY aircraft?",
+                "options": [
+                    "1 minute",
+                    "2 minutes",
+                    "3 minutes",
+                    "4 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the nominal vertical separation minimum applied at or above FL290 in non-RVSM airspace?",
+                "options": [
+                    "500 ft",
+                    "1000 ft",
+                    "1500 ft",
+                    "2000 ft"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "VMC Climb and Descent clearance, subject to maintaining own separation, may be applied for a specified portion of the flight at or below which altitude?",
+                "options": [
+                    "5,000 ft",
+                    "8,000 ft",
+                    "10,000 ft",
+                    "15,000 ft"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "When lateral separation is based on VOR radials diverging by at least 15 degrees, what is the minimum distance required from a co-located DME below FL190?",
+                "options": [
+                    "10 NM",
+                    "15 NM",
+                    "17 NM",
+                    "18 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "When lateral separation is based on VOR radials diverging by at least 15 degrees, what is the minimum distance required from a co-located DME at or above FL190?",
+                "options": [
+                    "10 NM",
+                    "15 NM",
+                    "17 NM",
+                    "18 NM"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "What track divergence and distance are required for lateral separation using an NDB?",
+                "options": [
+                    "15 degrees and 15 NM",
+                    "30 degrees and 15 NM",
+                    "45 degrees and 20 NM",
+                    "60 degrees and 25 NM"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "When one aircraft is maintaining a radial from a VOR and another aircraft is crossing its track, lateral separation is deemed to exist when the angular difference is between 45 and 135 degrees and the crossing aircraft is at least what distance from the VOR?",
+                "options": [
+                    "10 DME",
+                    "15 DME",
+                    "20 DME",
+                    "25 DME"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Reciprocal tracks are defined as opposite tracks and intersecting tracks with an angular difference of more than 135 degrees but less than what angle?",
+                "options": [
+                    "180 degrees",
+                    "200 degrees",
+                    "225 degrees",
+                    "315 degrees"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the longitudinal separation minimum for aircraft climbing or descending on the same track while vertical separation does not exist, provided both utilize an on-track DME station?",
+                "options": [
+                    "5 NM",
+                    "10 NM",
+                    "15 NM",
+                    "20 NM"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Whenever a holding aircraft is involved, vertical separation shall be applied with en-route aircraft whenever the en-route aircraft is within what time distance of the holding area?",
+                "options": [
+                    "3 minutes flying time",
+                    "5 minutes flying time",
+                    "10 minutes flying time",
+                    "15 minutes flying time"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "If an arriving aircraft is making a straight-in approach, a departing aircraft may take off in any direction until how many minutes before the arriving aircraft is estimated to be over the instrument runway?",
+                "options": [
+                    "3 minutes",
+                    "5 minutes",
+                    "10 minutes",
+                    "15 minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "When a departing aircraft is maintaining a radial from a VOR and an arriving aircraft is established on a DME arc of at least 10 NM using the same VOR, lateral separation is deemed to exist if the departing aircraft crosses the arc from behind and has passed a VOR radial different by at least what angle?",
+                "options": [
+                    "15 degrees",
+                    "30 degrees",
+                    "45 degrees",
+                    "60 degrees"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the standard traffic circuit direction for RWY 07 at Chennai?",
+                "options": [
+                    "Right hand traffic circuit",
+                    "Left hand traffic circuit",
+                    "Straight-in only",
+                    "Variable based on wind"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the standard traffic circuit direction for RWY 05 at Tambaram?",
+                "options": [
+                    "Right hand traffic circuit",
+                    "Left hand traffic circuit",
+                    "Straight-in only",
+                    "Variable based on wind"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "What delay threshold requires ATC to determine and transmit an Expected Approach Time (EAT) to an arriving aircraft?",
+                "options": [
+                    "5 minutes or more",
+                    "10 minutes or more",
+                    "15 minutes or more",
+                    "30 minutes or more"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "If holding is anticipated for 30 minutes or more, how should the Expected Approach Time (EAT) be transmitted?",
+                "options": [
+                    "By standard HF radio",
+                    "By data link only",
+                    "By the most expeditious means",
+                    "It should only be transmitted via company dispatch"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Under what minimum visibility condition are ICG Helicopters permitted to operate VFR flights at night in Chennai according to the local TLI?",
+                "options": [
+                    "1500 meters",
+                    "3000 meters",
+                    "5000 meters",
+                    "8000 meters"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the maximum number of ICG helicopters permitted to operate simultaneously as VFR flights at night in the designated sectors?",
+                "options": [
+                    "One",
+                    "Two",
+                    "Three",
+                    "Four"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In case of Radio Communication Failure (RCF) for an ICG helicopter at night, which visual reference point should the helicopter hold over?",
+                "options": [
+                    "Cholavaram Lake",
+                    "Puzhal Lake",
+                    "Porur Lake",
+                    "Maduravoyal Junction"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What are the vertical limits within which IAF aircraft operate in the Tambaram local flying area VOR 183(B)?",
+                "options": [
+                    "GND to FL100",
+                    "FL100 to FL150",
+                    "FL150 to FL250",
+                    "FL250 to FL460"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Aircraft carrying out low altitude navigation from Tambaram must remain at or below what altitude within 30 NM of the Chennai ARP?",
+                "options": [
+                    "500ft AMSL",
+                    "1000ft AMSL",
+                    "1300ft AMSL",
+                    "2100ft AMSL"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the transponder restriction for aircraft operating within the Tambaram Local Flying Area (LFA) within 10 KMs of the Tambaram ARP?",
+                "options": [
+                    "Must squawk both Mode A and Mode C",
+                    "Must turn transponder off completely",
+                    "Must squawk Mode S only",
+                    "Shall squawk Mode A only and not squawk Mode C"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "What is the standard traffic circuit direction for RWY 06 at INS Rajali, Arakkonam?",
+                "options": [
+                    "Right Hand Traffic Circuit",
+                    "Left Hand Traffic Circuit",
+                    "Straight-in only",
+                    "Variable based on wind"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Where is the transfer of control point for diversions by Tambaram aircraft to Chennai?",
+                "options": [
+                    "South of Tambaram Airfield",
+                    "Overhead MMV VOR",
+                    "North of Pallavaram Hill",
+                    "At 10 DME from Chennai"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the transition altitude for the Tirupati (VOTP) Control Zone?",
+                "options": [
+                    "4000ft",
+                    "6000ft",
+                    "8000ft",
+                    "10000ft"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What are the vertical limits of the Dynamic airspace RAJALI-1?",
+                "options": [
+                    "GND to 2000ft",
+                    "GND to 5000ft",
+                    "MSL to FL080",
+                    "MSL to FL150"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "The ILS glideslope typically provides an aircraft with what descent angle towards the runway?",
+                "options": [
+                    "2 degrees",
+                    "2.5 degrees",
+                    "3 degrees",
+                    "3.5 degrees"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "For a Category I (CAT I) ILS approach, what is the minimum allowed Decision Height (DH)?",
+                "options": [
+                    "Not lower than 50 feet",
+                    "Not lower than 100 feet",
+                    "Not lower than 200 feet",
+                    "There is no DH limitation"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "For a Category II (CAT II) ILS approach, what is the minimum allowed Runway Visual Range (RVR)?",
+                "options": [
+                    "Not less than 75 meters",
+                    "Not less than 200 meters",
+                    "Not less than 300 meters",
+                    "Not less than 550 meters"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What distance measurement does an aircraft's Distance Measuring Equipment (DME) interrogator calculate based on the round trip time of a signal?",
+                "options": [
+                    "Horizontal range",
+                    "Slant range",
+                    "Ground range",
+                    "Vertical range"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the name of the Satellite-Based Augmentation System (SBAS) providing wide-area corrections and integrity information in India?",
+                "options": [
+                    "WAAS",
+                    "EGNOS",
+                    "MSAS",
+                    "GAGAN"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "What is the Final Descend Altitude for all RNP Approaches at Chennai?",
+                "options": [
+                    "1500 feet",
+                    "1800 feet",
+                    "2100 feet",
+                    "3000 feet"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In what frequency band does the Microwave Landing System (MLS) operate?",
+                "options": [
+                    "1 GHz",
+                    "5 GHz",
+                    "10 GHz",
+                    "15 GHz"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What visual indication on the Precision Approach Path Indicator (PAPI) informs the pilot that the aircraft is ABOVE the correct glide path?",
+                "options": [
+                    "Two white lights and two red lights",
+                    "More white lights than red",
+                    "More red lights than white",
+                    "All red lights"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What visual indication on the Precision Approach Path Indicator (PAPI) informs the pilot that the aircraft is BELOW the correct glide path?",
+                "options": [
+                    "Two white lights and two red lights",
+                    "More white lights than red",
+                    "More red lights than white",
+                    "All white lights"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the length and classification of the Approach Lighting System for RWY 07 at Chennai?",
+                "options": [
+                    "510 meters, Intermediate Approach Light System (IALS)",
+                    "900 meters, Full Approach Light System (FALS)",
+                    "420 meters, Basic Approach Light System (BALS)",
+                    "Not available"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the length and classification of the Approach Lighting System for RWY 25 at Chennai?",
+                "options": [
+                    "900 meters, Full Approach Light System (FALS)",
+                    "510 meters, Intermediate Approach Light System (IALS)",
+                    "210 meters, Basic Approach Light System (BALS)",
+                    "Not available"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the color of the Runway edge lights at Chennai airport?",
+                "options": [
+                    "Red",
+                    "Blue",
+                    "Variable white",
+                    "Amber"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "When a controller activates the 'Split function' on the SITTI MULTIFONO M600S VCSS, how are communications routed when a handset is connected?",
+                "options": [
+                    "Radio goes to the handset, telephone goes to the headset.",
+                    "Radio goes to the headset, telephone goes to the handset.",
+                    "Both radio and telephone go to the loudspeaker.",
+                    "Both radio and telephone go to the headset."
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Which VHF frequency is designated as the Emergency/Guard frequency and guarded at all ATS units?",
+                "options": [
+                    "118.1 MHz",
+                    "121.5 MHz",
+                    "124.1 MHz",
+                    "127.9 MHz"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What are the S4 Controller (ALT VHF) frequencies provided for the APP DEP position?",
+                "options": [
+                    "120.75 MHz / 127.9 MHz",
+                    "127.9 MHz / 120.7 MHz / 118.1 MHz",
+                    "118.1 MHz / 121.9 MHz",
+                    "134.25 MHz / 125.3 MHz"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What are the S4 Controller (ALT VHF) frequencies provided for the APP ARR position?",
+                "options": [
+                    "127.9 MHz / 120.7 MHz / 118.1 MHz",
+                    "120.75 MHz / 127.9 MHz",
+                    "118.1 MHz / 121.9 MHz",
+                    "134.25 MHz / 125.3 MHz"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In the AT3+ Air Traffic Management System, what is the primary function of the Flight Data Processor Subsystem (FDPS)?",
+                "options": [
+                    "To provide accurate and rapid flight data processing and display it to the controllers.",
+                    "To process radar track and plot information.",
+                    "To provide air-ground datalink communication.",
+                    "To scan documents and convert them to PDF."
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "In the AT3+ Air Traffic Management System, what is the function of the Surveillance Data Processor Subsystem (SDPS)?",
+                "options": [
+                    "It distributes software releases and records statistics.",
+                    "It processes flight plans to provide airport arrival sequences.",
+                    "It acquires and fuses reports from multiple surveillance sensors into single sensor and system tracks.",
+                    "It provides synchronized time throughout the system."
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Which AT3+ workstation is primarily used to provide the main functional interface between AT3 and the controller, presenting both tabular and situation display formats?",
+                "options": [
+                    "Tower Controller Workstation (TCWS)",
+                    "Common Controller Workstation (CCWS)",
+                    "General Purpose Workstation (GPWS)",
+                    "Data Link Display (DLD)"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What does ASMGCS stand for?",
+                "options": [
+                    "Airborne Surveillance Management and Ground Control System",
+                    "Advanced Surface Movement Guidance and Control System",
+                    "Automated Security Monitoring and Ground Communication System",
+                    "Aerodrome Surface Maintenance and Guidance Control Service"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What does 'SMR' refer to in the context of ASMGCS?",
+                "options": [
+                    "Satellite Movement Receiver",
+                    "System Monitoring Radius",
+                    "Surface Movement Radar",
+                    "Standard Meteorological Record"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Multilateration (MLAT) calculates an aircraft's precise location by using which mathematical process?",
+                "options": [
+                    "Time difference of arrival (TDOA) of the transponder signal to 3 or more receiver stations",
+                    "Primary radar echo reflection timings",
+                    "Doppler shift analysis of VHF voice communications",
+                    "Airborne weather radar attenuation"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "In the ASMGCS, what does the alert acronym 'RVM' stand for?",
+                "options": [
+                    "Runway Visibility Minimum",
+                    "Restriction Violation Monitoring",
+                    "Radar Vector Management",
+                    "Route Verification Measurement"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In the ASMGCS, what does the alert acronym 'RIM' stand for?",
+                "options": [
+                    "Radar Identification Match",
+                    "Route Intersection Management",
+                    "Runway Incursion Monitoring",
+                    "Restricted Instrument Minimums"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "In ASMGCS, what does 'TTT' stand for and what is it used for?",
+                "options": [
+                    "Time To Threshold; used to plan departures between consecutive arrivals based on time rather than distance.",
+                    "Terminal Traffic Tool; used to measure taxiway congestion.",
+                    "Target Tracking Time; used to assess MLAT accuracy.",
+                    "Total Takeoff Time; used to manage departure queues."
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "How are consecutive DATIS (Digital Automatic Terminal Information Service) messages designated?",
+                "options": [
+                    "Using numerical digits starting from 1.",
+                    "Using the local time of broadcast.",
+                    "Using letters of the ICAO spelling alphabet in consecutive order.",
+                    "Using the active runway designator followed by a sequence number."
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "At Chennai Airport, which device measures the attenuation of the intensity of light to provide Runway Visual Range (RVR) data?",
+                "options": [
+                    "Ultrasonic wind sensor",
+                    "Drishti-Transmissometer / VAISALA PWD22",
+                    "Digital Current Weather Instrument System (DCWIS)",
+                    "Ceilometer"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "The Nav Aids Status Indicator at Chennai Approach control positions displays the serviceability of which combination of equipment?",
+                "options": [
+                    "Localizer, Glide path, GP DME for RWY 07 & 25, VOR MMV, and VOR CNI",
+                    "ASMGCS, DATIS, and MLAT receivers",
+                    "Primary Radar, Secondary Radar, and ADS-B sensors",
+                    "PAPI, Runway Edge Lights, and Approach Lighting Systems"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "What is the height of the prominent Chimney obstacle at Ennore?",
+                "options": [
+                    "300 ft",
+                    "495 ft",
+                    "574 ft",
+                    "912 ft"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "What is the height of the prominent Pallavaram Mosque Hill obstacle?",
+                "options": [
+                    "268 ft",
+                    "300 ft",
+                    "495 ft",
+                    "557 ft"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "What is the approximate distance from the MMV VOR to the Cholavaram Airstrip?",
+                "options": [
+                    "5.8 NM",
+                    "10.6 NM",
+                    "13 NM",
+                    "28 NM"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "According to the Aircraft Code based on Wingspan, what wingspan range corresponds to Code Letter 'C'?",
+                "options": [
+                    "15 m but < 24 m",
+                    "24 m but < 36 m",
+                    "36 m but < 52 m",
+                    "52 m but < 65 m"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "According to the Aircraft Code based on Wingspan, what wingspan range corresponds to Code Letter 'E'?",
+                "options": [
+                    "15 m but < 24 m",
+                    "24 m but < 36 m",
+                    "36 m but < 52 m",
+                    "52 m but < 65 m"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "According to Wake Turbulence Categories, what is the defining mass criterion for a 'Heavy' (H) aircraft (excluding super)?",
+                "options": [
+                    "7 000 kg or less",
+                    "More than 7 000 kg and less than 136 000 kg",
+                    "136 000 kg or more",
+                    "560 000 kg or more"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Which of the following defines 'True Airspeed' (TAS)?",
+                "options": [
+                    "The speed shown directly on the aircraft's airspeed indicator.",
+                    "The IAS corrected for instrument error and installation error.",
+                    "The CAS corrected for altitude and nonstandard temperature.",
+                    "The speed of the aircraft relative to the ground."
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Under Approach Speed Categorisation, what is the indicated airspeed at threshold (VAT) range for Category C aircraft?",
+                "options": [
+                    "91 - 120 knots",
+                    "121 - 140 knots",
+                    "141 - 165 knots",
+                    "166 - 210 knots"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "To reduce false TCAS Resolution Advisories (RA), what is the maximum vertical speed an aircraft should maintain when 1000 feet prior to a level-off altitude?",
+                "options": [
+                    "500 feet per minute",
+                    "1000 feet per minute",
+                    "1500 feet per minute",
+                    "2000 feet per minute"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the turn rate for a Standard Rate Turn (or Rate One Turn)?",
+                "options": [
+                    "1 degree per second",
+                    "2 degrees per second",
+                    "3 degrees per second",
+                    "4 degrees per second"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "What is the peak hourly runway traffic handling capacity at Chennai Airport for Runway 07/25 for combined Arrivals and Departures?",
+                "options": [
+                    "25",
+                    "26",
+                    "27",
+                    "36"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "To comply with a Calculated Take-off Time (CTOT) under the ATFM program, an aircraft's Actual Time of Departure (ATD) must fall within which window?",
+                "options": [
+                    "-5 to +5 Minutes",
+                    "-5 to +10 Minutes",
+                    "-10 to +10 Minutes",
+                    "-15 to +15 Minutes"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "The Arrival Manager (AMAN) sequences arrivals based on what primary flight data?",
+                "options": [
+                    "Distance to touch down and Flight time",
+                    "Aircraft weight and wake turbulence category",
+                    "Fuel remaining and passenger load",
+                    "Airline schedule and priority status"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "Which of the following defines 'Severe Turbulence' based on accelerometer readings at the aircraft's centre of gravity?",
+                "options": [
+                    "Changes less than 0.5 g",
+                    "Changes between 0.5 - 1.0 g",
+                    "Changes greater than 1.0 g",
+                    "Changes greater than 3.0 g"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "Low-level wind shear is most problematic because it typically occurs within what altitude range?",
+                "options": [
+                    "Surface to a height of approximately 1500 ft",
+                    "1500 ft to 3000 ft",
+                    "3000 ft to 10000 ft",
+                    "Above FL290"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "question": "Clear Air Turbulence (CAT) over North India during the winter season is primarily associated with which meteorological feature?",
+                "options": [
+                    "The Easterly Jet",
+                    "The Sub-tropical Westerly Jet",
+                    "The Somali Jet",
+                    "Mountain wave rotors"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Once formed, wake turbulence vortices are known to sink at approximately what speed?",
+                "options": [
+                    "0.5 m/s",
+                    "1-2 m/s",
+                    "3-5 m/s",
+                    "5-10 m/s"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "True hail (METAR code GR) is defined as hail with a diameter of at least what size?",
+                "options": [
+                    "1 mm",
+                    "3 mm",
+                    "5 mm",
+                    "10 mm"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "For aviation purposes, fog is defined as a condition where horizontal visibility is reduced to less than what distance?",
+                "options": [
+                    "500 m",
+                    "800 m",
+                    "1000 m",
+                    "1500 m"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "How is a 'squall' defined in terms of wind speed increase and duration?",
+                "options": [
+                    "An increase in mean wind by at least 10 kt, sustained for 30 seconds.",
+                    "An increase in mean wind by at least 16 kt, to a minimum of 22 kt, sustained for 1 minute.",
+                    "An increase in mean wind by at least 25 kt, sustained for 5 minutes.",
+                    "An abrupt shift in wind direction by 90 degrees."
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "According to the Approach Ban Policy, an instrument approach shall not be continued below what altitude if the reported RVR/Visibility falls below the applicable minimum?",
+                "options": [
+                    "500 ft above the aerodrome",
+                    "1000 ft above the aerodrome",
+                    "Decision Height (DH)",
+                    "Minimum Descent Altitude (MDA)"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What is the minimum permitted Runway Visual Range (RVR) for a Low Visibility Take-Off (LVTO) on Runway 07/25 at Chennai International Airport?",
+                "options": [
+                    "75 m",
+                    "125 m",
+                    "150 m",
+                    "200 m"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "Low Visibility Procedures (LVP) shall be implemented at Chennai whenever the Visibility/RVR is less than 800/550 meters and/or the cloud ceiling is less than what height?",
+                "options": [
+                    "100 Feet",
+                    "200 Feet",
+                    "300 Feet",
+                    "400 Feet"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "In the Global Reporting Format (GRF) Runway Condition Assessment Matrix (RCAM), what Runway Condition Code (RWYCC) signifies a DRY runway?",
+                "options": [
+                    "0",
+                    "3",
+                    "5",
+                    "6"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "question": "In the Global Reporting Format (GRF) Runway Condition Assessment Matrix (RCAM), what Runway Condition Code (RWYCC) signifies ICE?",
+                "options": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "What phraseology should a controller use to disseminate a Pilot Report (PIREP) on braking action to succeeding aircraft?",
+                "options": [
+                    "CAUTION, SLIPPERY RUNWAY REPORTED",
+                    "BRAKING ACTION REPORTED BY (aircraft type) AT (time) GOOD (or GOOD TO MEDIUM, or MEDIUM, or MEDIUM TO POOR, or POOR)",
+                    "RUNWAY CONDITION CODE 1 REPORTED BY PRECEDING AIRCRAFT",
+                    "EXPECT REDUCED DECELERATION ON RUNWAY"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "question": "Under emergency notification protocols, what triggers the UNCERTAINTY PHASE (INCERFA) regarding lost communications?",
+                "options": [
+                    "No communication received within 5 minutes after the time a communication should have been received.",
+                    "No communication received within 15 minutes after the time a communication should have been received.",
+                    "No communication received within 30 minutes after the time a communication should have been received.",
+                    "No communication received within 60 minutes after the time a communication should have been received."
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "question": "The ALERT PHASE (ALERFA) is triggered if an aircraft has been cleared to land and fails to land within how many minutes of the estimated time of landing?",
+                "options": [
+                    "3 minutes",
+                    "5 minutes",
+                    "10 minutes",
+                    "15 minutes"
+                ],
+                "correctAnswer": 1
             }
         ],
         "OCEANIC CONTROL": [
